@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+{% block title %}Accueil | Madagascar{% endblock %}
+{% block body %}
+    <h1 style="text-align: center">Accueil</h1>
+
+    <div class="row">
+        <div class="row col-md-6 col-md-offset-2 custyle">
+            <h3 style="text-decoration: underline">Statistique par province</h3>
+            <table class="table table-striped custab">
+                <thead>
+                <tr>
+                    <th>PROVINCE</th>
+                    <th>A FAIRE</th>
+                    <th>FAIT</th>
+                    <th>POURCENTAGE</th>
+                </tr>
+                </thead>
+                {% for data in province_datas %}
+                    <tr>
+                        <td>{{ data['PROVINCE'] }}</td>
+                        <td>{{ data['A FAIRE'] }}</td>
+                        <td>{{ data['FAIT'] }}</td>
+                        <td>{{ data['POURCENTAGE'] }} %</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="row col-md-6 col-md-offset-2 custyle">
+            <h3 style="text-decoration: underline">Statistique par region</h3>
+            <table class="table table-striped custab">
+                <thead>
+                <tr>
+                    <th>REGION</th>
+                    <th>A FAIRE</th>
+                    <th>FAIT</th>
+                    <th>POURCENTAGE</th>
+                </tr>
+                </thead>
+                {% for data in region_datas %}
+                    <tr>
+                        <td>{{ data['REGION'] }}</td>
+                        <td>{{ data['A FAIRE'] }}</td>
+                        <td>{{ data['FAIT'] }}</td>
+                        <td>{{ data['POURCENTAGE'] }} %</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock %}

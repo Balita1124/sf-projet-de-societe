@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+{% block title %}Region | Madagascar{% endblock %}
+{% block body %}
+    <div class="user-dashboard">
+    <h1 style="text-align: center">Liste des regions</h1>
+
+    <div class="row">
+        <div class="row col-md-6 col-md-offset-2 custyle">
+            <table class="table table-striped custab">
+                <thead>
+                <a href="{{ path('create_region')}}" class="btn btn-primary btn-xs pull-left"><b>+</b> Ajouter une region</a>
+                <tr>
+                    {#<th>id</th>#}
+                    <th>Nom</th>
+                    <th>Capital</th>
+                    <th>Slogan</th>
+                    <th>Province</th>
+                    <th class="text-center">Action</th>
+                </tr>
+                </thead>
+                {% for region in regions %}
+                    <tr>
+                        {#<td>{{ region.id }}</td>#}
+                        <td>
+                            <a href="{{ path('show_region', { 'region': region.id }) }}">{{ region.name }}</a>
+                        </td>
+                        <td>{{ region.capital }}</td>
+                        <td>{{ region.slogan }}</td>
+                        <td>{{ region.province.name }}</td>
+                        <td class="text-center">
+                            <a class='btn btn-info btn-xs'
+                               href="{{ path('edit_region', { 'region': region.id }) }}"><span
+                                        class="fa fa-edit"></span></a>
+                            <a href="{{ path('delete_region', { 'region': region.id }) }}"
+                               class="btn btn-danger btn-xs"><span
+                                        class="fa fa-remove"></span></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock %}

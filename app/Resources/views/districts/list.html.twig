@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+{% block title %}District | Madagascar{% endblock %}
+{% block body %}
+    <div class="user-dashboard">
+    <h1 style="text-align: center">Liste des districts</h1>
+
+    <div class="row">
+        <div class="row col-md-6 col-md-offset-2 custyle">
+            <table class="table table-striped custab">
+                <thead>
+                <a href="{{ path('create_district') }}" class="btn btn-primary btn-xs pull-left"><b>+</b> Ajouter un
+                    district</a>
+                <tr>
+                    {#<th>id</th>#}
+                    <th>Nom</th>
+                    <th>Region</th>
+                    <th class="text-center">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for district in districts %}
+                    <tr>
+                        {#<td>{{ district.id }}</td>#}
+                        <td><a href="{{ path('show_district', { 'district': district.id }) }}">{{ district.name }}</a>
+                        </td>
+                        <td>
+                            <a href="{{ path('show_region', { 'region': district.region.id }) }}">{{ district.region.name }}</a>
+                        </td>
+                        <td class="text-center">
+                            <a class='btn btn-info btn-xs'
+                               href="{{ path('edit_district', { 'district': district.id }) }}"><span
+                                        class="fa fa-edit"></span></a>
+                            <a href="{{ path('delete_district', { 'district': district.id }) }}"
+                               class="btn btn-danger btn-xs"><span
+                                        class="fa fa-remove"></span></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock %}

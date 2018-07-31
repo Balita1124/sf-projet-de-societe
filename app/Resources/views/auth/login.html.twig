@@ -1,0 +1,59 @@
+{% extends 'auth.html.twig' %}
+{% block title %}Login | Madagascar{% endblock %}
+{% block body %}
+    <!-- Top content -->
+    <div class="top-content">
+        <div class="inner-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 text">
+                        <h1><strong>Application de gestion des promesses presidentielles</strong></h1>
+
+                        <div class="description">
+                            <p>
+                                <strong>Madagascar</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3 form-box">
+                        <div class="form-top">
+                            <div class="form-top-left">
+                                <h3>Se connecter</h3>
+
+                                <p>Renseigner le mail et mot de passe:</p>
+                            </div>
+                            <div class="form-top-right">
+                                <i class="fa fa-lock"></i>
+                            </div>
+                        </div>
+                        {% if error %}
+                            <div class="form-flash">
+                                <p>{{ error.messageKey|trans(error.messageData) }}</p>
+                            </div>
+                        {% endif %}
+                        <div class="form-bottom">
+                            <form role="form" action="{{ path('security_login_check') }}" method="POST"
+                                  class="login-form">
+                                <div class="form-group">
+                                    <label class="sr-only" for="email">Email</label>
+                                    <input type="text" name="_email" placeholder="Email..."
+                                           class="form-username form-control" id="form-username">
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="form-password">Mot de passe</label>
+                                    <input type="password" name="_password" placeholder="Mot de passe..."
+                                           class="form-password form-control" id="form-password">
+                                </div>
+                                <input type="submit" name="loginSubmit" class="btn" value="Se connecter"/>
+                            </form>
+                        </div>
+                        {#content#}
+                    </div>
+                </div>
+                {##}<a href="{{ path('register')}}" class="inscription">Inscription</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

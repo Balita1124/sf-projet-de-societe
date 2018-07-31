@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block title %}Promesse | Madagascar{% endblock %}
+{% block body %}
+    <h1>{{ promesse.name }}</h1>
+    <span>{{ promesse.description }}</span> <br>
+    {#<span>{{ promesse.date }}</span> <br>#}
+    <span>{{ promesse.province.name }}</span> <br>
+    <span>{{ promesse.region.name }}</span> <br>
+    <span>{{ promesse.district.name }}</span> <br>
+{% endblock %}

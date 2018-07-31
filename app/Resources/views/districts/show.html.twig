@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+{% block title %}District | Madagascar{% endblock %}
+{% block body %}
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>District {{ district.name }}</h1>
+            <span>Region  : <a
+                        href="{{ path('show_district', { 'district': district.region.id }) }}">{{ district.region.name }}</a></span><br>
+            <span>Province  : <a
+                        href="{{ path('show_province', { 'province': district.region.province.id }) }}">{{ district.region.province.name }}</a></span>
+        </div>
+        <div class="col-md-12">
+            {% if district.promesses != null %}
+                <div class="row">
+                    <div class="row col-md-6 col-md-offset-2 custyle">
+                        <table class="table table-striped custab">
+                            <thead>
+                            {#<a href="{{ path('create_promesse') }}" class="btn btn-primary btn-xs pull-left"><b>+</b> Ajouter une#}
+                            {#promesse</a>#}
+                            <h3 style="text-decoration: underline">Promesses presidentielles dans le district</h3>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Description</th>
+                                {#<th>Date</th>#}
+                                <th>Province</th>
+                                <th>Region</th>
+                                <th>District</th>
+                                {#<th class="text-center">Action</th>#}
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for promesse in district.promesses %}
+                                <tr>
+                                    <td>{{ promesse.name }}</td>
+                                    <td>{{ promesse.description }}</td>
+                                    {#<td>{{ promesse.date }}</td>#}
+                                    <td>
+                                        <a href="{{ path('show_province', { 'province': promesse.province.id }) }}">{{ promesse.province.name }}</a>
+                                    </td>
+                                    <td>
+                                        <a href="{{ path('show_region', { 'region': promesse.region.id }) }}">{{ promesse.region.name }}</a>
+                                    </td>
+                                    <td>
+                                        <a href="{{ path('show_district', { 'district': promesse.district.id }) }}">{{ promesse.district.name }}</a>
+                                    </td>
+                                    {#<td class="text-center">#}
+                                    {#<a class='btn btn-info btn-xs'#}
+                                    {#href="{{ path('edit_promesse', { 'promesse': promesse.id }) }}"><span#}
+                                    {#class="fa fa-edit"></span></a>#}
+                                    {#<a href="{{ path('delete_promesse', { 'promesse': promesse.id }) }}"#}
+                                    {#class="btn btn-danger btn-xs"><span#}
+                                    {#class="fa fa-remove"></span></a>#}
+                                    {#</td>#}
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
