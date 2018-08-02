@@ -1,15 +1,14 @@
 {% extends 'base.html.twig' %}
-{% block title %}Promesse | Madagascar{% endblock %}
+{% block title %}Projets des societés | Madagascar{% endblock %}
 {% block body %}
-    <div class="user-dashboard">
-    <h1 style="text-align: center">Liste des promesses</h1>
+    <h1 class="entete-title">Liste des Projets des societés</h1>
 
     <div class="row">
         <div class="row col-md-6 col-md-offset-2 custyle">
             <table class="table table-striped custab">
                 <thead>
-                <a href="{{ path('create_promesse') }}" class="btn btn-primary btn-xs pull-left"><b>+</b> Ajouter une
-                    promesse</a>
+                <a href="{{ path('create_promesse') }}" class="btn btn-primary btn-xs pull-left"><b>+</b> Ajouter un
+                    projet</a>
                 <tr>
                     <th>Nom</th>
                     <th>Description</th>

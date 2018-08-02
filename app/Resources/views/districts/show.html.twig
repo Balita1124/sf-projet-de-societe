@@ -3,7 +3,7 @@
 {% block body %}
     <div class="row">
         <div class="col-md-12 text-center">
-            <h1>District {{ district.name }}</h1>
+            <h1 class="entete-title">District {{ district.name }}</h1>
             <span>Region  : <a
                         href="{{ path('show_district', { 'district': district.region.id }) }}">{{ district.region.name }}</a></span><br>
             <span>Province  : <a
@@ -17,7 +17,7 @@
                             <thead>
                             {#<a href="{{ path('create_promesse') }}" class="btn btn-primary btn-xs pull-left"><b>+</b> Ajouter une#}
                             {#promesse</a>#}
-                            <h3 style="text-decoration: underline">Promesses presidentielles dans le district</h3>
+                            <h3 class="section-title">Projets des societés dans le district</h3>
                             <tr>
                                 <th>Nom</th>
                                 <th>Description</th>

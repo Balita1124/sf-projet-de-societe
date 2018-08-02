@@ -39,9 +39,17 @@ class District
      */
     private $promesses;
 
+    /**
+     * @var ArrayCollection $districts
+     *
+     * @ORM\OneToMany(targetEntity="Commune", mappedBy="district", cascade={"persist", "remove", "merge"})
+     */
+    private $communes;
+
     public function __construct()
     {
         $this->promesses = new ArrayCollection();
+        $this->communes = new ArrayCollection();
     }
 
     public function addPromesse(Promesse $promesse)
@@ -54,12 +62,29 @@ class District
         }
     }
 
+    public function addCommune(Commune $commune)
+    {
+        $commune->setDistrict($this);
+
+        // Si l'objet fait déjà partie de la collection on ne l'ajoute pas
+        if (!$this->communes->contains($commune)) {
+            $this->communes->add($commune);
+        }
+    }
+
     /**
      * @return ArrayCollection $promesses
      */
     public function getPromesses()
     {
         return $this->promesses;
+    }
+    /**
+     * @return ArrayCollection $promesses
+     */
+    public function getCommunes()
+    {
+        return $this->communes;
     }
 
     /**

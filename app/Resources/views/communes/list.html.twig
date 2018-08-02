@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+{% block title %}Commune | Madagascar{% endblock %}
+{% block body %}
+    <h1 class="entete-title">Liste des communes</h1>
+
+    <div class="row">
+        <div class="row col-md-6 col-md-offset-2 custyle">
+            <table class="table table-striped custab">
+                <thead>
+                <a href="{{ path('create_commune') }}" class="btn btn-primary btn-xs pull-left"><b>+</b> Ajouter une
+                    commune</a>
+                <tr>
+                    {#<th>id</th>#}
+                    <th>Nom</th>
+                    <th>District</th>
+                    <th class="text-center">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for commune in communes %}
+                    <tr>
+                        {#<td>{{ commune.id }}</td>#}
+                        <td><a href="{{ path('show_commune', { 'commune': commune.id }) }}">{{ commune.name }}</a>
+                        </td>
+                        <td>
+                            <a href="{{ path('show_district', { 'district': commune.district.id }) }}">{{ commune.district.name }}</a>
+                        </td>
+                        <td class="text-center">
+                            <a class='btn btn-info btn-xs'
+                               href="{{ path('edit_commune', { 'commune': commune.id }) }}"><span
+                                        class="fa fa-edit"></span></a>
+                            <a href="{{ path('delete_commune', { 'commune': commune.id }) }}"
+                               class="btn btn-danger btn-xs"><span
+                                        class="fa fa-remove"></span></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock %}

@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\District;
 use AppBundle\Form\DistrictType;
+use AppBundle\Service;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -11,7 +12,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 class MainController extends Controller
 {
-    protected $path = "accueil";
+    protected $path = "main";
 
     /**
      * @Route("/", name="accueil")
@@ -19,41 +20,62 @@ class MainController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $sql = "
-                    SELECT
-                    pr.name \"PROVINCE\",
-                    count(pm.id) \"A FAIRE\",
-                    count(CASE WHEN pm.etat = 1 THEN 1 END) \"FAIT\",
-                    ((count(CASE WHEN pm.etat = 1 THEN 1 END) / count(pm.id)) * 100) \"POURCENTAGE\"
-                    FROM promesse pm
-                    LEFT JOIN province pr ON pr.id = pm.province_id
-                    GROUP BY pr.name
-                    ORDER BY pr.name ASC
-                ";
-        $sql_region = "
-                SELECT
-                rg.name \"REGION\",
-                count(pm.id) \"A FAIRE\",
-                count(CASE WHEN pm.etat = 1 THEN 1 END) \"FAIT\",
-                ((count(CASE WHEN pm.etat = 1 THEN 1 END) / count(pm.id)) * 100) \"POURCENTAGE\"
-                FROM promesse pm
-                LEFT JOIN region rg ON rg.id = pm.region_id
-                GROUP BY rg.name
-                ORDER BY rg.name ASC
-                ";
-
-        $em = $this->getDoctrine()->getManager();
-        $statement = $em->getConnection()->prepare($sql);
-        $statement->execute();
-        $province_datas = $statement->fetchAll();
-
-        $statement = $em->getConnection()->prepare($sql_region);
-        $statement->execute();
-        $region_datas = $statement->fetchAll();
         return $this->render('default/index.html.twig', [
             'value' => $this->path,
+        ]);
+    }
+
+    /**
+     * @Route("/main/stat", name="stat")
+     * @Security("has_role('ROLE_USER')")
+     */
+    public function statAction(Request $request)
+    {
+        $statistique = new Service\Statistique();
+        $em = $this->getDoctrine()->getManager();
+        $province_datas = $statistique->getProvinceStat($em);
+        $region_datas = $statistique->getRegionStat($em);
+        $district_datas = $statistique->getDistrictStat($em);
+        return $this->render('default/stat.html.twig', [
+            'value' => 'stat',
             'province_datas' => $province_datas,
-            'region_datas' => $region_datas
+            'region_datas' => $region_datas,
+            'district_datas' => $district_datas
+        ]);
+    }
+
+    /**
+     * @Route("/main/hist", name="hist")
+     * @Security("has_role('ROLE_USER')")
+     */
+    public function histogramAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $statistique = new Service\Statistique();
+        $chart = [];
+        $chart[0] = $statistique->getProvinceHist($em);
+        $chart[1] = $statistique->getRegionHist($em);
+        $chart[2] = $statistique->getDistrictHist($em);
+        return $this->render('default/hist.html.twig', [
+            'value' => 'stat',
+            'histogram' => $chart
+        ]);
+    }
+
+    /**
+     * @Route("/main/cam", name="cam")
+     * @Security("has_role('ROLE_USER')")
+     */
+    public function camAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $statistique = new Service\Statistique();
+        $pieChart_array = $statistique->getProvinceCam($em);
+//        var_dump($pieChart);die;
+
+        return $this->render('default/cam.html.twig', [
+            'value' => 'stat',
+            'piechart' => $pieChart_array,
         ]);
     }
 }

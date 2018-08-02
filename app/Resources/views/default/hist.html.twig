@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block title %}Accueil | Madagascar{% endblock %}
+{% block body %}
+    <h1 class="entete-title">Statistiques</h1>
+    <div class="row">
+    <div class="col-md-12 text-center">
+        <ul>
+            <li class="menu-stat"><a href="{{ path('stat') }}">Statistique</a></li>
+            {#<li class="menu-stat"><a href="{{ path('cam') }}">Camembert</a></li>#}
+            <li class="menu-stat"><a href="{{ path('hist') }}">Histogramme</a></li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="row col-md-6 col-md-offset-3 custyle" style="margin-top: 25px">
+            <h4 style="text-decoration: underline">Province</h4>
+            <div id="div_histogram_province" style="margin-top: 40px"></div>
+            <h4 style="text-decoration: underline">Region</h4>
+            <div id="div_histogram_region" style="margin-top: 40px"></div>
+            <h4 style="text-decoration: underline">District</h4>
+            <div id="div_histogram_district" style="margin-top: 40px"></div>
+            {#<div id="div_chart"></div>#}
+        </div>
+    </div>
+    <script type="text/javascript" src="{{ asset('public/js/loader.js') }}"></script>
+    <script type="text/javascript">
+        {{ gc_draw(histogram,['div_histogram_province', 'div_histogram_region', 'div_histogram_district']) }}
+    </script>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block title %}Accueil | Madagascar{% endblock %}
+{% block body %}
+    <h1 class="entete-title">Statistiques</h1>
+    <div class="row">
+    <div class="col-md-12 text-center">
+        <ul>
+            <li class="menu-stat"><a href="{{ path('stat') }}">Statistique</a></li>
+            <li class="menu-stat"><a href="{{ path('cam') }}">Camembert</a></li>
+            <li class="menu-stat"><a href="{{ path('hist') }}">Histogramme</a></li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="row col-md-6 col-md-offset-2 custyle">
+            <div id="div_chart_a_faire"></div>
+            <div id="div_chart_fait"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="{{ asset('public/js/loader.js') }}"></script>
+    <script type="text/javascript">
+        {{ gc_draw(piechart,['div_chart_a_faire', 'div_chart_fait']) }}
+    </script>
+{% endblock %}

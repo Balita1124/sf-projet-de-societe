@@ -3,7 +3,7 @@
 {% block body %}
     <div class="row">
         <div class="col-md-12 text-center">
-            <h1>Region de {{ region.name }}</h1>
+            <h1 class="entete-title">Region de {{ region.name }}</h1>
 
             <span>Capitale  : {{ region.capital }}</span><br>
             <span>Slogan  : {{ region.slogan }}</span><br>
@@ -12,7 +12,7 @@
         <div class="col-md-12">
             <div class="row">
                 <div class="row col-md-6 col-md-offset-2 custyle">
-                    <h3 style="text-decoration: underline">Districts dans le province</h3>
+                    <h3 class="section-title">Districts dans le province</h3>
                     <table class="table table-striped custab">
                         <thead>
                         {#<a href="{{ path('create_district') }}" class="btn btn-primary btn-xs pull-left"><b>+</b> Ajouter un#}
@@ -55,7 +55,7 @@
                             <thead>
                             {#<a href="{{ path('create_promesse') }}" class="btn btn-primary btn-xs pull-left"><b>+</b> Ajouter une#}
                             {#promesse</a>#}
-                            <h3 style="text-decoration: underline">Promesses presidentielles dans la region</h3>
+                            <h3 class="section-title">Projets des societés dans la region</h3>
                             <tr>
                                 <th>Nom</th>
                                 <th>Description</th>

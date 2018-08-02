@@ -3,7 +3,7 @@
 {% block body %}
     <div class="row">
         <div class="col-md-12 text-center">
-            <h1>Province de {{ province.name }}</h1>
+            <h1 class="entete-title">Province de {{ province.name }}</h1>
 
             <span>Code postal  : {{ province.zipCode }}</span>
             <br>
@@ -13,7 +13,7 @@
             {% if province.regions != null %}
                 <div class="row">
                     <div class="row col-md-6 col-md-offset-2 custyle">
-                        <h3 style="text-decoration: underline">Regions dans le province</h3>
+                        <h3 class="section-title">Regions dans le province</h3>
                         <table class="table table-striped custab">
                             <thead>
                             {#<a href="{{ path('create_region') }}" class="btn btn-primary btn-xs pull-left"><b>+</b>#}
@@ -60,7 +60,7 @@
                             <thead>
                             {#<a href="{{ path('create_promesse') }}" class="btn btn-primary btn-xs pull-left"><b>+</b> Ajouter une#}
                             {#promesse</a>#}
-                            <h3 style="text-decoration: underline">Promesses presidentielles dans le province</h3>
+                            <h3 class="section-title">Projets des societés dans le province</h3>
                             <tr>
                                 <th>Nom</th>
                                 <th>Description</th>
