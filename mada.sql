@@ -15,6 +15,23 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`madagascar` /*!40100 DEFAULT CHARACTER 
 
 USE `madagascar`;
 
+/*Table structure for table `commune` */
+
+DROP TABLE IF EXISTS `commune`;
+
+CREATE TABLE `commune` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `district_id` int(11) DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `IDX_E2E2D1EEB08FA272` (`district_id`),
+  CONSTRAINT `FK_E2E2D1EEB08FA272` FOREIGN KEY (`district_id`) REFERENCES `district` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Data for the table `commune` */
+
+insert  into `commune`(`id`,`district_id`,`name`) values (2,13,'Fianarantsoa');
+
 /*Table structure for table `district` */
 
 DROP TABLE IF EXISTS `district`;
@@ -108,7 +125,7 @@ CREATE TABLE `user` (
 
 /*Data for the table `user` */
 
-insert  into `user`(`id`,`email`,`name`,`role`,`password`) values (2,'rabe@gmail.com','rabe','ROLE_USER','$2y$13$UJncxv6ADcoAlW36fKSTJetsGUwW2F/PBvADG./DRCVdLuKDLiR6S'),(3,'harivola@gmail.com','Harivola','ROLE_USER','$2y$13$baIFQIFrfBx44xlb..TuwOsc3VpY0GyuQp60gmAoxJiIUTJPxvYHW');
+insert  into `user`(`id`,`email`,`name`,`role`,`password`) values (2,'rabe@gmail.com','rabe','ROLE_USER','$2y$13$UJncxv6ADcoAlW36fKSTJetsGUwW2F/PBvADG./DRCVdLuKDLiR6S'),(3,'pasmi@gmail.com','Pasmi','ROLE_USER','$2y$13$baIFQIFrfBx44xlb..TuwOsc3VpY0GyuQp60gmAoxJiIUTJPxvYHW');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
