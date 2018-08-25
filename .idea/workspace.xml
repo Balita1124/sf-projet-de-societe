@@ -2,128 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2cdec6e7-a717-4991-8c52-9b701bc6b5ab" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/public_old/img/hery-rajaonarimampianina-hvm.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/public_old/img/login_background.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.old.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/communes/list1.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/communes/list2.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/communes/list3.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/communes/list4.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/fokontanys/create.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/fokontanys/edit.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/fokontanys/list.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/fokontanys/show.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/bootstrap/css/bootstrap-datepicker.css" afterPath="$PROJECT_DIR$/web/public_old/bootstrap/css/bootstrap-datepicker.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/bootstrap/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/web/public_old/bootstrap/css/bootstrap-theme.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/bootstrap/css/bootstrap-theme.css.map" afterPath="$PROJECT_DIR$/web/public_old/bootstrap/css/bootstrap-theme.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/bootstrap/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/web/public_old/bootstrap/css/bootstrap-theme.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/bootstrap/css/bootstrap.css" afterPath="$PROJECT_DIR$/web/public_old/bootstrap/css/bootstrap.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/bootstrap/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/web/public_old/bootstrap/css/bootstrap.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/bootstrap/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/web/public_old/bootstrap/css/bootstrap.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/web/public_old/bootstrap/fonts/glyphicons-halflings-regular.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/web/public_old/bootstrap/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/web/public_old/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/web/public_old/bootstrap/fonts/glyphicons-halflings-regular.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/web/public_old/bootstrap/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/bootstrap/js/bootstrap-datepicker.min.js" afterPath="$PROJECT_DIR$/web/public_old/bootstrap/js/bootstrap-datepicker.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/bootstrap/js/bootstrap.js" afterPath="$PROJECT_DIR$/web/public_old/bootstrap/js/bootstrap.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/bootstrap/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/web/public_old/bootstrap/js/bootstrap.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/bootstrap/js/npm.js" afterPath="$PROJECT_DIR$/web/public_old/bootstrap/js/npm.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/css/application.css" afterPath="$PROJECT_DIR$/web/public_old/css/application.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/css/form-elements.css" afterPath="$PROJECT_DIR$/web/public_old/css/form-elements.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/css/style_security.css" afterPath="$PROJECT_DIR$/web/public_old/css/style_security.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/css/font-awesome.css" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/css/font-awesome.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/css/font-awesome.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/css/font-awesome.min.old.css" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/css/font-awesome.min.old.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/fonts/FontAwesome.otf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/fonts/fontawesome-webfont.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/fonts/fontawesome-webfont.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/fonts/fontawesome-webfont.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/fonts/fontawesome-webfont.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/fonts/fontawesome-webfont.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/less/animated.less" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/less/animated.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/less/bordered-pulled.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/less/core.less" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/less/core.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/less/fixed-width.less" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/less/fixed-width.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/less/font-awesome.less" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/less/font-awesome.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/less/icons.less" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/less/icons.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/less/larger.less" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/less/larger.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/less/list.less" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/less/list.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/less/mixins.less" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/less/mixins.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/less/path.less" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/less/path.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/less/rotated-flipped.less" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/less/rotated-flipped.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/less/stacked.less" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/less/stacked.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/less/variables.less" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/less/variables.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/scss/_animated.scss" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/scss/_animated.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/scss/_bordered-pulled.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/scss/_core.scss" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/scss/_core.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/scss/_fixed-width.scss" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/scss/_fixed-width.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/scss/_icons.scss" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/scss/_icons.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/scss/_larger.scss" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/scss/_larger.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/scss/_list.scss" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/scss/_list.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/scss/_mixins.scss" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/scss/_mixins.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/scss/_path.scss" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/scss/_path.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/scss/_rotated-flipped.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/scss/_stacked.scss" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/scss/_stacked.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/scss/_variables.scss" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/scss/_variables.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/font-awesome/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/web/public_old/font-awesome/scss/font-awesome.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/img/drapeau.jpg" afterPath="$PROJECT_DIR$/web/public_old/img/drapeau.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/img/drapeau.png" afterPath="$PROJECT_DIR$/web/public_old/img/drapeau.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/img/hery-rajaonarimampianina-hvm.jpg" afterPath="$PROJECT_DIR$/web/public/images/hery-rajaonarimampianina-hvm.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/img/login_background.jpg" afterPath="$PROJECT_DIR$/web/public/images/auth/login_1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/img/mg.png" afterPath="$PROJECT_DIR$/web/public_old/img/mg.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/js/application.js" afterPath="$PROJECT_DIR$/web/public_old/js/application.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/js/html5shiv.js" afterPath="$PROJECT_DIR$/web/public_old/js/html5shiv.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/js/jquery-1.11.1.js" afterPath="$PROJECT_DIR$/web/public_old/js/jquery-1.11.1.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/js/jquery-1.11.1.min.js" afterPath="$PROJECT_DIR$/web/public_old/js/jquery-1.11.1.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/js/jquery.backstretch.js" afterPath="$PROJECT_DIR$/web/public_old/js/jquery.backstretch.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/js/jquery.backstretch.min.js" afterPath="$PROJECT_DIR$/web/public_old/js/jquery.backstretch.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/js/loader.js" afterPath="$PROJECT_DIR$/web/public_old/js/loader.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/js/placeholder.js" afterPath="$PROJECT_DIR$/web/public_old/js/placeholder.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/js/respond.min.js" afterPath="$PROJECT_DIR$/web/public_old/js/respond.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/public/js/scripts.js" afterPath="$PROJECT_DIR$/web/public_old/js/scripts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/public/images/CEG.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/public/images/rajaonarimampianina-hvm.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/auth.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/auth.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/auth/login.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/auth/login.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/communes/create.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/communes/create.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/communes/edit.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/communes/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/communes/list.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/communes/list.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/communes/show.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/communes/show.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/default/hist.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/default/hist.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/default/stat.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/default/stat.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/districts/create.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/districts/create.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/districts/edit.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/districts/edit.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/districts/list.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/districts/list.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/districts/show.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/districts/show.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/promesses/create.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/promesses/create.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/promesses/edit.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/promesses/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/promesses/list.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/promesses/list.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/provinces/create.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/provinces/create.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/provinces/edit.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/provinces/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/provinces/list.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/provinces/list.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/provinces/show.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/provinces/show.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/regions/create.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/regions/create.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/regions/edit.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/regions/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/regions/list.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/regions/list.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/regions/show.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/regions/show.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/CommuneController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/CommuneController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DistrictController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DistrictController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/MainController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/MainController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/PromesseController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/PromesseController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mada.sql" afterPath="$PROJECT_DIR$/mada.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/ProvinceController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ProvinceController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/RegionController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/RegionController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/RegistrationController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/RegistrationController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/SecurityController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/SecurityController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Commune.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Commune.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Promesse.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Promesse.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Form/CommuneType.php" afterPath="$PROJECT_DIR$/src/AppBundle/Form/CommuneType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Form/PromesseType.php" afterPath="$PROJECT_DIR$/src/AppBundle/Form/PromesseType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Form/UserType.php" afterPath="$PROJECT_DIR$/src/AppBundle/Form/UserType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Service/Statistique.php" afterPath="$PROJECT_DIR$/src/AppBundle/Service/Statistique.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Twig/AppExtension.php" afterPath="$PROJECT_DIR$/src/AppBundle/Twig/AppExtension.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/District.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/District.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Form/DistrictType.php" afterPath="$PROJECT_DIR$/src/AppBundle/Form/DistrictType.php" />
     </list>
     <ignored path="Madagascar.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -152,101 +44,103 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="list.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/communes/list.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.153846">
-              <caret line="14" column="100" selection-start-line="14" selection-start-column="100" selection-end-line="14" selection-end-column="100" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommuneController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/CommuneController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.807692">
-              <caret line="102" column="47" selection-start-line="102" selection-start-column="47" selection-end-line="102" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Promesse.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Promesse.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.5384617">
-              <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PromesseType.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/PromesseType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.4615384">
-              <caret line="29" column="52" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="52" />
+            <state vertical-scroll-proportion="-4.076923">
+              <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/promesses/create.html.twig">
+      <file leaf-file-name="list.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/districts/list.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43220338">
-              <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
+            <state vertical-scroll-proportion="3.2692308">
+              <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list1.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/communes/list1.html.twig">
+      <file leaf-file-name="create.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/districts/create.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1923075">
-              <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="30" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list2.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/communes/list2.html.twig">
+      <file leaf-file-name="edit.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/districts/edit.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1923075">
-              <caret line="11" column="67" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
+            <state vertical-scroll-proportion="-6.5384617">
+              <caret line="10" column="67" selection-start-line="10" selection-start-column="67" selection-end-line="10" selection-end-column="67" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list3.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/communes/list3.html.twig">
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-8.5">
-              <caret line="13" column="53" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+              <caret line="13" column="57" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list4.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/communes/list4.html.twig">
+      <file leaf-file-name="hist.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/default/hist.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.153846">
-              <caret line="14" column="53" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.6050847">
+              <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+              <folding>
+                <element signature="e#1068#1088#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DistrictController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DistrictController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-63.423077">
+              <caret line="102" column="48" selection-start-line="102" selection-start-column="48" selection-end-line="102" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/communes/show.html.twig">
+      <file leaf-file-name="District.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/District.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614">
-              <caret line="28" column="111" selection-start-line="28" selection-start-column="111" selection-end-line="28" selection-end-column="111" />
+            <state vertical-scroll-proportion="-12.884615">
+              <caret line="48" column="24" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DistrictType.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/DistrictType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.730769">
+              <caret line="28" column="28" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.7307692">
+              <caret line="71" column="27" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -270,8 +164,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/AppBundle/Twig/AppExtension.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/provinces/create.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/provinces/edit.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/regions/create.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/provinces/list.html.twig" />
@@ -280,26 +172,19 @@
         <option value="$PROJECT_DIR$/app/Resources/views/regions/show.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/districts/list.html.old.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/districts/show.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/districts/create.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/districts/edit.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/districts/list.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/promesses/list.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/promesses/create.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/promesses/edit.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/default/stat.html.twig" />
         <option value="$PROJECT_DIR$/web/public/js/chart.js" />
         <option value="$PROJECT_DIR$/src/AppBundle/Service/Statistique.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/default/hist.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/MainController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/DistrictController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/PromesseController.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/ProvinceController.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/RegionController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/RegistrationController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/SecurityController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/auth/login.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/FokontanyController.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/FokontanyType.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Fokontany.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/fokontanys/create.html.twig" />
@@ -312,7 +197,6 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Form/CommuneType.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/communes/show.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/communes/create.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/communes/list4.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/communes/list3.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/communes/list2.html.twig" />
@@ -320,7 +204,17 @@
         <option value="$PROJECT_DIR$/app/Resources/views/communes/list.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/CommuneController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Promesse.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/RegionController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/ProvinceController.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/PromesseType.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/District.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Form/DistrictType.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/districts/list.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/districts/edit.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/districts/create.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/default/hist.html.twig" />
       </list>
     </option>
   </component>
@@ -380,6 +274,60 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Madagascar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Madagascar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Madagascar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Madagascar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Madagascar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Madagascar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Madagascar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -539,33 +487,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="provinces" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Madagascar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Madagascar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="promesses" />
+              <option name="myItemId" value="districts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -595,32 +517,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Madagascar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Madagascar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="communes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -641,11 +537,11 @@
       <recent name="C:\wamp64\www\Madagascar\src\AppBundle" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\Madagascar\web\public\images" />
       <recent name="C:\wamp64\www\Madagascar\app\Resources\views\communes" />
       <recent name="C:\wamp64\www\Madagascar\app\Resources\views" />
       <recent name="C:\wamp64\www\Madagascar\src\AppBundle\Controller" />
       <recent name="C:\wamp64\www\Madagascar\src\AppBundle\Form" />
-      <recent name="C:\wamp64\www\Madagascar\web\public\images\auth" />
     </key>
   </component>
   <component name="RunManager">
@@ -695,7 +591,7 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20717423" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -731,31 +627,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/public/images/menu_icons/02.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/public/images/menu_icons/03.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/public/images/menu_icons/04.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/public/images/menu_icons/05.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/public/images/menu_icons/06.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/public/images/menu_icons/07.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -787,22 +658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ProvinceController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.0769231">
-          <caret line="102" column="46" selection-start-line="102" selection-start-column="46" selection-end-line="102" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/RegionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.7307692">
-          <caret line="101" column="46" selection-start-line="101" selection-start-column="46" selection-end-line="101" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/RegistrationController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.807692">
@@ -816,17 +671,6 @@
         <state vertical-scroll-proportion="-13.538462">
           <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/hist.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="24" selection-end-column="26" />
-          <folding>
-            <marker date="1535115355407" expanded="true" signature="31:2140" placeholder="{% block body ...%}" />
-            <marker date="1535115355407" expanded="true" signature="2145:8262" placeholder="{% block additionnals ...%}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -876,14 +720,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.8846154">
           <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.730769">
-          <caret line="100" column="48" selection-start-line="100" selection-start-column="48" selection-end-line="100" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -944,24 +780,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DistrictController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.423077">
-          <caret line="102" column="48" selection-start-line="102" selection-start-column="48" selection-end-line="102" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/District.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538">
-          <caret line="51" column="48" selection-start-line="51" selection-start-column="48" selection-end-line="51" selection-end-column="48" />
-          <folding>
-            <element signature="e#35#67#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/FokontanyType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.8846154">
@@ -993,7 +811,7 @@
         <state vertical-scroll-proportion="-12.115385">
           <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
           <folding>
-            <element signature="e#34#93#0#PHP" expanded="true" />
+            <element signature="e#34#93#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1002,14 +820,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.307693">
           <caret line="29" column="143" selection-start-line="29" selection-start-column="143" selection-end-line="29" selection-end-column="143" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.192307">
-          <caret line="92" column="26" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -1102,19 +912,117 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/PromesseType.php">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/promesses/create.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4615384">
-          <caret line="29" column="52" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="52" />
+        <state vertical-scroll-proportion="-9.807693">
+          <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/promesses/create.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/regions/list.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43220338">
-          <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/RegionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.076923">
+          <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ProvinceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.384615">
+          <caret line="27" column="48" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.7307692">
+          <caret line="71" column="27" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/PromesseType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.076923">
+          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.5">
+          <caret line="13" column="57" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DistrictController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-63.423077">
+          <caret line="102" column="48" selection-start-line="102" selection-start-column="48" selection-end-line="102" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/District.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.884615">
+          <caret line="48" column="24" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/DistrictType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.730769">
+          <caret line="28" column="28" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/districts/list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.2692308">
+          <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/districts/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="10" column="67" selection-start-line="10" selection-start-column="67" selection-end-line="10" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/districts/create.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="30" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/hist.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6050847">
+          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+          <folding>
+            <element signature="e#1068#1088#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -19,8 +19,8 @@
                 <div class="col-lg-12 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Histogramme par province</h4>
-                            <canvas id="barChartProvince" style="height:230px"></canvas>
+                            <h4 class="card-title">Histogramme par district</h4>
+                            <canvas id="barChartDistrict" style="height:230px"></canvas>
                         </div>
                     </div>
                 </div>
@@ -39,8 +39,8 @@
                 <div class="col-lg-12 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Histogramme par district</h4>
-                            <canvas id="barChartDistrict" style="height:230px"></canvas>
+                            <h4 class="card-title">Histogramme par province</h4>
+                            <canvas id="barChartProvince" style="height:230px"></canvas>
                         </div>
                     </div>
                 </div>
@@ -50,7 +50,6 @@
 
 {% endblock %}
     {% block additionnals %}
-        'use strict';
         <script type="text/javascript">
             var options = {
                 scales: {
@@ -159,7 +158,7 @@
             }
 
             var data_district = {{ histogram[2]|json_encode()|raw }};
-            var arrayLengthDistrict= data_district.length;
+            var arrayLengthDistrict = data_district.length;
             var districtData_labels = [];
             var districtDatasets_data = [];
             for (var i = 0; i < arrayLengthDistrict; i++) {

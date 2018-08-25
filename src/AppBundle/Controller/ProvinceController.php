@@ -25,7 +25,7 @@ class ProvinceController extends Controller
         return $this->render('provinces/list.html.twig', [
             'provinces' => $provinces,
             'value' => $this->path,
-            'title' => 'Projets | Madagascar',
+            'title' => 'Provinces | Madagascar',
         ]);
     }
 
@@ -55,7 +55,7 @@ class ProvinceController extends Controller
         return $this->render('provinces/create.html.twig', [
             'form' => $form->createView(),
             'value' => $this->path,
-            'title' => 'Projets | Madagascar',
+            'title' => 'Provinces | Madagascar',
         ]);
     }
 
@@ -82,7 +82,7 @@ class ProvinceController extends Controller
         return $this->render('provinces/edit.html.twig', [
             'form' => $form->createView(),
             'value' => $this->path,
-            'title' => 'Projets | Madagascar',
+            'title' => 'Provinces | Madagascar',
         ]);
     }
 
@@ -100,7 +100,7 @@ class ProvinceController extends Controller
         return $this->render('provinces/show.html.twig', [
             'province' => $province,
             'value' => $this->path,
-            'title' => 'Projets | Madagascar',
+            'title' => 'Provinces | Madagascar',
         ]);
     }
 

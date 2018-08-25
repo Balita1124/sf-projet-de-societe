@@ -24,6 +24,32 @@ class District
     protected $name;
 
     /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    protected $nbEpp;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    protected $nbCeg;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    protected $nbLycee;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    protected $population;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    protected $electeurs;
+
+
+    /**
      * @var Region $region
      *
      * @ORM\ManyToOne(targetEntity="Region", inversedBy="districts", cascade={"persist", "merge"})
@@ -133,6 +159,86 @@ class District
     public function setName($name)
     {
         $this->name = $name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNbEpp()
+    {
+        return $this->nbEpp;
+    }
+
+    /**
+     * @param mixed $nbEpp
+     */
+    public function setNbEpp($nbEpp)
+    {
+        $this->nbEpp = $nbEpp;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNbCeg()
+    {
+        return $this->nbCeg;
+    }
+
+    /**
+     * @param mixed $nbCeg
+     */
+    public function setNbCeg($nbCeg)
+    {
+        $this->nbCeg = $nbCeg;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNbLycee()
+    {
+        return $this->nbLycee;
+    }
+
+    /**
+     * @param mixed $nbLycee
+     */
+    public function setNbLycee($nbLycee)
+    {
+        $this->nbLycee = $nbLycee;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPopulation()
+    {
+        return $this->population;
+    }
+
+    /**
+     * @param mixed $population
+     */
+    public function setPopulation($population)
+    {
+        $this->population = $population;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getElecteurs()
+    {
+        return $this->electeurs;
+    }
+
+    /**
+     * @param mixed $electeurs
+     */
+    public function setElecteurs($electeurs)
+    {
+        $this->electeurs = $electeurs;
     }
 
 }

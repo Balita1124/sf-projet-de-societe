@@ -3,6 +3,7 @@
 namespace AppBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -21,6 +22,11 @@ class DistrictType extends AbstractType
     {
         $builder
             ->add('name', TextType::class)
+            ->add('nbEpp', IntegerType::class)
+            ->add('nbCeg', IntegerType::class)
+            ->add('nbLycee', IntegerType::class)
+            ->add('population', IntegerType::class)
+            ->add('electeurs', IntegerType::class)
             ->add('region', EntityType::class, array(
                 'class' => Region::class,
                 'choice_label' => 'name',
