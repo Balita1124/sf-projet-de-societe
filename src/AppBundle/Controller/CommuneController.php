@@ -25,6 +25,64 @@ class CommuneController extends Controller
         return $this->render('communes/list.html.twig', [
             'communes' => $communes,
             'value' => $this->path,
+            'title' => 'Communes | Madagascar',
+        ]);
+    }
+
+    /**
+     * @Route("/communes1/", name="list_commune1")
+     * @Security("has_role('ROLE_USER')")
+     */
+    public function list1Action(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $communes = $em->getRepository('AppBundle:Commune')->findBy(array('tvm' => true, 'rnm' => true));
+        return $this->render('communes/list1.html.twig', [
+            'communes' => $communes,
+            'value' => $this->path,
+            'title' => 'Communes | Madagascar',
+        ]);
+    }
+    /**
+     * @Route("/communes2/", name="list_commune2")
+     * @Security("has_role('ROLE_USER')")
+     */
+    public function list2Action(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $communes = $em->getRepository('AppBundle:Commune')->findBy(array('tvm' => true, 'rnm' => false));
+        return $this->render('communes/list2.html.twig', [
+            'communes' => $communes,
+            'value' => $this->path,
+            'title' => 'Communes | Madagascar',
+        ]);
+    }
+    /**
+     * @Route("/communes3/", name="list_commune3")
+     * @Security("has_role('ROLE_USER')")
+     */
+    public function list3Action(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $communes = $em->getRepository('AppBundle:Commune')->findBy(array('tvm' => false, 'rnm' => true));
+        return $this->render('communes/list3.html.twig', [
+            'communes' => $communes,
+            'value' => $this->path,
+            'title' => 'Communes | Madagascar',
+        ]);
+    }
+    /**
+     * @Route("/communes4/", name="list_commune4")
+     * @Security("has_role('ROLE_USER')")
+     */
+    public function list4Action(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $communes = $em->getRepository('AppBundle:Commune')->findBy(array('tvm' => false, 'rnm' => false));
+        return $this->render('communes/list4.html.twig', [
+            'communes' => $communes,
+            'value' => $this->path,
+            'title' => 'Communes | Madagascar',
         ]);
     }
 
@@ -41,7 +99,8 @@ class CommuneController extends Controller
         }
         return $this->render('communes/show.html.twig', [
             'commune' => $commune,
-            'value' => $this->path
+            'value' => $this->path,
+            'title' => 'Communes | Madagascar',
         ]);
     }
 
@@ -70,7 +129,8 @@ class CommuneController extends Controller
         }
         return $this->render('communes/create.html.twig', [
             'form' => $form->createView(),
-            'value' => $this->path
+            'value' => $this->path,
+            'title' => 'Communes | Madagascar',
         ]);
     }
 
@@ -96,7 +156,8 @@ class CommuneController extends Controller
         }
         return $this->render('communes/edit.html.twig', [
             'form' => $form->createView(),
-            'value' => $this->path
+            'value' => $this->path,
+            'title' => 'Communes | Madagascar',
         ]);
     }
 

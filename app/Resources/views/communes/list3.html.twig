@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Liste des communes(Sans TVM/Avec RNM)</h4>
+                            <ul>
+                                <li><a href="{{ path('list_commune') }}">Toutes</a></li>
+                                <li><a href="{{ path('list_commune1') }}">Avec TVM/Avec RNM</a></li>
+                                <li><a href="{{ path('list_commune2') }}">Avec TVM/Sans RNM</a></li>
+                                <li>Sans TVM/Avec RNM</li>
+                                <li><a href="{{ path('list_commune4') }}">Sans TVM/Sans RNM</a></li>
+                            </ul>
+
+                            <p class="card-description">
+                                <a href="{{ path('create_commune') }}" class="btn btn-success pull-left"><span
+                                            class="fa fa-plus"></span>
+                                    Ajouter une commune
+                                </a>
+                            </p>
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>Nom</th>
+                                    <th>District</th>
+                                    <th>Région</th>
+                                    <th>RNM</th>
+                                    <th>TVM</th>
+                                    <th>HVM</th>
+                                    <th>Population</th>
+                                    <th>Nombre Electeurs</th>
+                                    <th>Observation</th>
+                                    <th class="text-center">#</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for commune in communes %}
+                                    <tr>
+                                        <td>
+                                            <a href="{{ path('show_commune', { 'commune': commune.id }) }}">{{ commune.name }}</a>
+                                        </td>
+                                        <td>
+                                            <a href="{{ path('show_district', { 'district': commune.district.id }) }}">{{ commune.district.name }}</a>
+                                        </td>
+                                        <td>
+                                            <a href="{{ path('show_region', { 'region': commune.district.region.id }) }}">{{ commune.district.region.name }}</a>
+                                        </td>
+                                        <td>
+                                            {{commune.rnm == true? "OUI": "NON"}}
+                                        </td>
+                                        <td>
+                                            {{commune.tvm == true? "OUI": "NON"}}
+                                        </td>
+                                        <td>
+                                            {{commune.hvm == true? "OUI": "NON"}}
+                                        </td>
+                                        <td>{{ commune.population }}</td>
+                                        <td>{{ commune.electeurs }}</td>
+                                        <td>{{ commune.observation }}</td>
+                                        <td class="text-center">
+                                            <a class='btn btn-primary btn-xs'
+                                               href="{{ path('edit_commune', { 'commune': commune.id }) }}"><span
+                                                        class="fa fa-pencil-square-o"></span> Modifier</a>
+                                            <a href="{{ path('delete_commune', { 'commune': commune.id }) }}"
+                                               class="btn btn-danger btn-xs"><span
+                                                        class="fa fa-remove"> Supprimer</span></a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

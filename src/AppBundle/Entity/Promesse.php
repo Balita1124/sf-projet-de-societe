@@ -23,7 +23,7 @@ class Promesse
     protected $name;
 
     /**
-     * @ORM\Column(type="text", length=255, nullable=false)
+     * @ORM\Column(type="text", nullable=false)
      */
     protected $description;
 

@@ -1,28 +1,204 @@
 {% extends 'base.html.twig' %}
-{% block title %}Accueil | Madagascar{% endblock %}
 {% block body %}
-    <h1 class="entete-title">Statistiques</h1>
-    <div class="row">
-    <div class="col-md-12 text-center">
-        <ul>
-            <li class="menu-stat"><a href="{{ path('stat') }}">Statistique</a></li>
-            {#<li class="menu-stat"><a href="{{ path('cam') }}">Camembert</a></li>#}
-            <li class="menu-stat"><a href="{{ path('hist') }}">Histogramme</a></li>
-        </ul>
-    </div>
-    <div class="row">
-        <div class="row col-md-6 col-md-offset-3 custyle" style="margin-top: 25px">
-            <h4 style="text-decoration: underline">Province</h4>
-            <div id="div_histogram_province" style="margin-top: 40px"></div>
-            <h4 style="text-decoration: underline">Region</h4>
-            <div id="div_histogram_region" style="margin-top: 40px"></div>
-            <h4 style="text-decoration: underline">District</h4>
-            <div id="div_histogram_district" style="margin-top: 40px"></div>
-            {#<div id="div_chart"></div>#}
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title text-gray">Statistique</h3>
+                            <ul style="display: inline-block">
+                                <li class="menu-stat"><a href="{{ path('stat') }}">Statistique</a></li>
+                                <li class="menu-stat">Histogramme</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Histogramme par province</h4>
+                            <canvas id="barChartProvince" style="height:230px"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Histogramme par région</h4>
+                            <canvas id="barChartRegion" style="height:230px"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Histogramme par district</h4>
+                            <canvas id="barChartDistrict" style="height:230px"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <script type="text/javascript" src="{{ asset('public/js/loader.js') }}"></script>
-    <script type="text/javascript">
-        {{ gc_draw(histogram,['div_histogram_province', 'div_histogram_region', 'div_histogram_district']) }}
-    </script>
+
 {% endblock %}
+    {% block additionnals %}
+        'use strict';
+        <script type="text/javascript">
+            var options = {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                },
+                legend: {
+                    display: false
+                },
+                elements: {
+                    point: {
+                        radius: 0
+                    }
+                }
+            };
+
+            var data_province = {{ histogram[0]|json_encode()|raw }};
+            var arrayLengthProvince = data_province.length;
+            var provinceData_labels = [];
+            var provinceDatasets_data = [];
+            for (var i = 0; i < arrayLengthProvince; i++) {
+                provinceData_labels.push(data_province[i][0]);
+                provinceDatasets_data.push(data_province[i][1]);
+            }
+            var data1 = {
+                labels: provinceData_labels,
+                datasets: [{
+                    label: '# Pourcentage',
+                    data: provinceDatasets_data,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            };
+
+            // Get context with jQuery - using jQuery's .get() method.
+            if ($("#barChartProvince").length) {
+                var barChartCanvas = $("#barChartProvince").get(0).getContext("2d");
+                // This will get the first returned node in the jQuery collection.
+                var barChart = new Chart(barChartCanvas, {
+                    type: 'bar',
+                    data: data1,
+                    options: options
+                });
+            }
+
+            var data_region = {{ histogram[1]|json_encode()|raw }};
+            var arrayLengthRegion = data_region.length;
+            var regionData_labels = [];
+            var regionDatasets_data = [];
+            for (var i = 0; i < arrayLengthRegion; i++) {
+                regionData_labels.push(data_region[i][0]);
+                regionDatasets_data.push(data_region[i][1]);
+            }
+            var data2 = {
+                labels: regionData_labels,
+                datasets: [{
+                    label: '# Pourcentage',
+                    data: regionDatasets_data,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            };
+
+            // Get context with jQuery - using jQuery's .get() method.
+            if ($("#barChartRegion").length) {
+                var barChartCanvas = $("#barChartRegion").get(0).getContext("2d");
+                // This will get the first returned node in the jQuery collection.
+                var barChart = new Chart(barChartCanvas, {
+                    type: 'bar',
+                    data: data2,
+                    options: options
+                });
+            }
+
+            var data_district = {{ histogram[2]|json_encode()|raw }};
+            var arrayLengthDistrict= data_district.length;
+            var districtData_labels = [];
+            var districtDatasets_data = [];
+            for (var i = 0; i < arrayLengthDistrict; i++) {
+                districtData_labels.push(data_district[i][0]);
+                districtDatasets_data.push(data_district[i][1]);
+            }
+            var data2 = {
+                labels: districtData_labels,
+                datasets: [{
+                    label: '# Pourcentage',
+                    data: districtDatasets_data,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            };
+
+            // Get context with jQuery - using jQuery's .get() method.
+            if ($("#barChartDistrict").length) {
+                var barChartCanvas = $("#barChartDistrict").get(0).getContext("2d");
+                var barChart = new Chart(barChartCanvas, {
+                    type: 'bar',
+                    data: data2,
+                    options: options
+                });
+            }
+        </script>
+    {% endblock %}

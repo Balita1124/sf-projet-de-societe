@@ -38,7 +38,8 @@ class RegistrationController extends Controller
 
         return $this->render('auth/register.html.twig', [
             'form' => $form->createView(),
-            'value'=>'none'
+            'value'=>'none',
+            'title' => "S'inscrire | Madagascar",
         ]);
     }
 }

@@ -13,7 +13,7 @@ class AppExtension extends \Twig_Extension
     public function isActive($demand, $value)
     {
         if ($demand === $value) {
-            return "class=active";
+            return "active";
         }
     }
 }

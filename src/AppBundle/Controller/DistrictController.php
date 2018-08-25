@@ -25,6 +25,7 @@ class DistrictController extends Controller
         return $this->render('districts/list.html.twig', [
             'districts' => $districts,
             'value' => $this->path,
+            'title' => 'Districts | Madagascar',
         ]);
     }
 
@@ -41,7 +42,8 @@ class DistrictController extends Controller
         }
         return $this->render('districts/show.html.twig', [
             'district' => $district,
-            'value' => $this->path
+            'value' => $this->path,
+            'title' => 'Districts | Madagascar',
         ]);
     }
 
@@ -70,7 +72,8 @@ class DistrictController extends Controller
         }
         return $this->render('districts/create.html.twig', [
             'form' => $form->createView(),
-            'value' => $this->path
+            'value' => $this->path,
+            'title' => 'Districts | Madagascar',
         ]);
     }
 
@@ -96,7 +99,8 @@ class DistrictController extends Controller
         }
         return $this->render('districts/edit.html.twig', [
             'form' => $form->createView(),
-            'value' => $this->path
+            'value' => $this->path,
+            'title' => 'Districts | Madagascar',
         ]);
     }
 

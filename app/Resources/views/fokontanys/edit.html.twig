@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-stretch grid-margin">
+                    <div class="row flex-grow">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Modifier un Fokontany</h4>
+
+                                    <p class="card-description">
+                                    </p>
+                                    {{ form_start(form, { 'attr': {'class': 'forms-sample'} }) }}
+                                    <div class="form-group">
+                                        <label for="name">Nom</label>
+                                        {{ form_widget(form.name, { 'attr': {'class': 'form-control', 'placeholder': 'Nom'} }) }}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="commune">Commune</label>
+                                        {{ form_widget(form.commune, { 'attr': {'class': 'form-control', 'placeholder': 'Commune'} }) }}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="habitants">Nombre habitants</label>
+                                        {{ form_widget(form.habitants, { 'attr': {'class': 'form-control', 'placeholder': 'Nombre habitants'} }) }}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lecteurs">Nombre Electeurs</label>
+                                        {{ form_widget(form.lecteurs, { 'attr': {'class': 'form-control', 'placeholder': 'Nombre Electeurs'} }) }}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="dernierElection">Pourcentage dernière election</label>
+                                        {{ form_widget(form.dernierElection, { 'attr': {'class': 'form-control', 'placeholder': 'Pourcentage dernière election'} }) }}
+                                    </div>
+                                    <button type="submit" class="btn btn-success pull-right">Enregistrer</button>
+                                    {{ form_end(form) }}
+                                    <a href="{{ path('list_fokontany') }}" class="btn btn-default pull-left"><span
+                                                class="fa fa-arrow-left"></span>
+                                        Annuler</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

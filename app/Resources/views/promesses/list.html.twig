@@ -1,57 +1,75 @@
 {% extends 'base.html.twig' %}
-{% block title %}Projets des societés | Madagascar{% endblock %}
 {% block body %}
-    <h1 class="entete-title">Projets des societés 2019_2023</h1>
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Projets des societés 2019_2023</h4>
 
-    <div class="row">
-        <div class="row col-md-6 col-md-offset-2 custyle">
-            <table class="table table-striped custab">
-                <thead>
-                <a href="{{ path('create_promesse') }}" class="btn btn-primary btn-xs pull-left"><b>+</b> Ajouter un
-                    projet</a>
-                <tr>
-                    <th>Nom</th>
-                    <th>Description</th>
-                    {#<th>Date</th>#}
-                    <th>Province</th>
-                    <th>Region</th>
-                    <th>District</th>
-                    <th>Etat</th>
-                    <th class="text-center">Action</th>
-                </tr>
-                </thead>
-                <tbody>
-                {% for promesse in promesses %}
-                    <tr>
-                        <td>{{ promesse.name }}</td>
-                        <td>{{ promesse.description }}</td>
-                        {#<td>{{ promesse.date }}</td>#}
-                        <td>
-                            <a href="{{ path('show_province', { 'province': promesse.province.id }) }}">{{ promesse.province.name }}</a>
-                        </td>
-                        <td>
-                            <a href="{{ path('show_region', { 'region': promesse.region.id }) }}">{{ promesse.region.name }}</a>
-                        </td>
-                        <td>
-                            <a href="{{ path('show_district', { 'district': promesse.district.id }) }}">{{ promesse.district.name }}</a>
-                        </td>
-                        <td>{{ promesse.etat ? "Fait" : "A faire" }}</td>
-                        <td class="text-center">
-                            <a class='btn btn-info btn-xs'
-                               href="{{ path('edit_promesse', { 'promesse': promesse.id }) }}"><span
-                                        class="fa fa-edit"></span></a>
-                            <a href="{{ path('delete_promesse', { 'promesse': promesse.id }) }}"
-                               class="btn btn-danger btn-xs"><span
-                                        class="fa fa-remove"></span></a>
-                            {% if(promesse.etat==false) %}
-                                <a class='btn btn-info btn-xs'
-                                   href="{{ path('do_promesse', { 'promesse': promesse.id }) }}"><span
-                                            class="fa fa-arrow-right"></span></a>
-                            {% endif %}
-                        </td>
-                    </tr>
-                {% endfor %}
-            </table>
+                            <p class="card-description">
+                                <a href="{{ path('create_promesse') }}" class="btn btn-success pull-left"><span
+                                            class="fa fa-plus"></span>
+                                    Ajouter un projet</a>
+                            </p>
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>Nom</th>
+                                    <th>Description</th>
+                                    {#<th>Date</th>#}
+                                    <th>Province</th>
+                                    <th>Region</th>
+                                    <th>District</th>
+                                    <th>Etat</th>
+                                    <th class="text-center">#</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for promesse in promesses %}
+                                    <tr>
+                                        <td>{{ promesse.name }}</td>
+                                        <td>{{ promesse.description }}</td>
+                                        {#<td>{{ promesse.date }}</td>#}
+                                        <td>
+                                            <a href="{{ path('show_province', { 'province': promesse.province.id }) }}">{{ promesse.province.name }}</a>
+                                        </td>
+                                        <td>
+                                            <a href="{{ path('show_region', { 'region': promesse.region.id }) }}">{{ promesse.region.name }}</a>
+                                        </td>
+                                        <td>
+                                            <a href="{{ path('show_district', { 'district': promesse.district.id }) }}">{{ promesse.district.name }}</a>
+                                        </td>
+                                        {#<td>{{ promesse.etat ? "Fait" : "A faire" }}</td>#}
+                                        <td class="text-center">
+                                            {% if promesse.etat==true %}
+                                                <span class="fa fa-check text-success"></span>
+                                            {% else %}
+                                                <span class="fa fa-remove text-gray"></span>
+                                            {% endif %}
+                                        </td>
+                                        <td class="text-center">
+                                            <a class='btn btn-primary btn-xs mt-1'
+                                               href="{{ path('edit_promesse', { 'promesse': promesse.id }) }}"><span
+                                                        class="fa fa-pencil-square-o"></span> Modifier</a>
+                                            <a href="{{ path('delete_promesse', { 'promesse': promesse.id }) }}"
+                                               class="btn btn-danger btn-xs mt-1"><span
+                                                        class="fa fa-remove"> Supprimer</span></a>
+                                            {% if(promesse.etat==false) %}
+                                                <a href="{{ path('do_promesse', { 'promesse': promesse.id }) }}"
+                                                   class="btn btn-warning btn-xs mt-1">Faire <span
+                                                            class="fa fa-arrow-right"></span></a>
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}

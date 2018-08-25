@@ -1,59 +1,54 @@
 {% extends 'auth.html.twig' %}
-{% block title %}Login | Madagascar{% endblock %}
+{#{% block title %}Login | Madagascar{% endblock %}#}
 {% block body %}
-    <!-- Top content -->
-    <div class="top-content">
-        <div class="inner-bg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2 text">
-                        <h1><strong>Application de gestion des Projets des societés</strong></h1>
+    <div class="container-scroller">
+        <div class="container-fluid page-body-wrapper full-page-wrapper">
+            <div class="content-wrapper d-flex align-items-center auth login-full-bg">
+                <div class="row w-100">
+                    <div class="col-lg-4 mx-auto">
+                        <div class="auth-form-dark text-left p-5">
+                            <h2>Se connecter</h2>
+                            <h4 class="font-weight-light">Renseigner le mail et mot de passe</h4>
 
-                        <div class="description">
-                            <p>
-                                <strong>Madagascar</strong>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6 col-sm-offset-3 form-box">
-                        <div class="form-top">
-                            <div class="form-top-left">
-                                <h3>Se connecter</h3>
-
-                                <p>Renseigner le mail et mot de passe:</p>
-                            </div>
-                            <div class="form-top-right">
-                                <i class="fa fa-lock"></i>
-                            </div>
-                        </div>
-                        {% if error %}
-                            <div class="form-flash">
-                                <p>{{ error.messageKey|trans(error.messageData) }}</p>
-                            </div>
-                        {% endif %}
-                        <div class="form-bottom">
+                            {#<form class="pt-5">#}
                             <form role="form" action="{{ path('security_login_check') }}" method="POST"
-                                  class="login-form">
+                                  class="pt-5">
+                                {#<form>#}
+                                {% if error %}
+                                    <p class="text-danger">
+                                        {{ error.messageKey|trans(error.messageData) }}
+                                    </p>
+                                {% endif %}
                                 <div class="form-group">
-                                    <label class="sr-only" for="email">Email</label>
-                                    <input type="text" name="_email" placeholder="Email..."
-                                           class="form-username form-control" id="form-username">
+                                    <label for="exampleInputEmail1">Email</label>
+                                    <input type="email" name="_email" class="form-control" id="exampleInputEmail1"
+                                           aria-describedby="emailHelp" placeholder="Email">
+                                    <i class="mdi mdi-account"></i>
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-password">Mot de passe</label>
-                                    <input type="password" name="_password" placeholder="Mot de passe..."
-                                           class="form-password form-control" id="form-password">
+                                    <label for="exampleInputPassword1">Mot de passe</label>
+                                    <input type="password" name="_password" class="form-control"
+                                           id="exampleInputPassword1"
+                                           placeholder="Mot de passe">
+                                    <i class="mdi mdi-eye"></i>
                                 </div>
-                                <input type="submit" name="loginSubmit" class="btn" value="Se connecter"/>
+                                <div class="mt-5">
+                                    {#<a class="btn btn-block btn-warning btn-lg font-weight-medium"#}
+                                    {#href="../../index.html">Login</a>#}
+                                    <input type="submit" name="loginSubmit"
+                                           class="btn btn-block btn-warning btn-lg font-weight-medium"
+                                           value="Se connecter"/>
+                                </div>
+                                {#<div class="mt-3 text-center">#}
+                                    {#<a href="#" class="auth-link text-white">Forgot password?</a>#}
+                                {#</div>#}
+                                {#</form>#}
                             </form>
                         </div>
-                        {#content#}
                     </div>
                 </div>
-                {##}<a href="{{ path('register')}}" class="inscription">Inscription</a>
             </div>
         </div>
     </div>
+
 {% endblock %}

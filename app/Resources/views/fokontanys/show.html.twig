@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title text-center display-4 text-primary"><span class="fa fa-home"></span>
+                                Fokontany {{ fokontany.name }}
+                            </h4>
+
+                            <p class="card-description text-center display-5">
+                                <span>Commune  :
+                                    <a href="{{ path('show_commune', { 'commune': fokontany.commune.id }) }}">
+                                        {{ fokontany.commune.name }}
+                                    </a>
+                                </span><br>
+                                <span>District  :
+                                    <a href="{{ path('show_district', { 'district': fokontany.commune.district.id }) }}">
+                                        {{ fokontany.commune.district.name }}
+                                    </a>
+                                </span><br>
+                                <span>Region  :
+                                    <a href="{{ path('show_region', { 'region': fokontany.commune.district.region.id }) }}">
+                                        {{ fokontany.commune.district.region.name }}
+                                    </a>
+                                </span><br>
+                                <span>Province  :
+                                    <a href="{{ path('show_province', { 'province': fokontany.commune.district.region.province.id }) }}">
+                                        {{ fokontany.commune.district.region.province.name }}
+                                    </a>
+                                </span><br>
+
+                            </p>
+
+                            <a href="{{ path('list_fokontany') }}" class="btn btn-default pull-left"><span
+                                        class="fa fa-arrow-left"></span>
+                                Retour</a>
+                        </div>
+                    </div>
+                </div>
+                {#<div class="col-lg-12 grid-margin stretch-card">#}
+                {#<div class="card">#}
+                {#<div class="card-body">#}
+                {#<h4 class="card-title text-primary"><u>Projets des societés dans la commune</u></h4>#}
+
+                {#<p class="card-description text-center display-5">#}
+                {#</p>#}
+                {#<table class="table table-bordered">#}
+                {#<thead>#}
+                {#<tr>#}
+                {#<th>Nom</th>#}
+                {#<th>Description</th>#}
+                {#&#123;&#35;<th>Date</th>&#35;&#125;#}
+                {#<th>Province</th>#}
+                {#<th>Region</th>#}
+                {#<th>District</th>#}
+                {#</tr>#}
+                {#</thead>#}
+                {#<tbody>#}
+                {#{% for promesse in commune.promesses %}#}
+                {#<tr>#}
+                {#<td>{{ promesse.name }}</td>#}
+                {#<td>{{ promesse.description }}</td>#}
+                {#&#123;&#35;<td>{{ promesse.date }}</td>&#35;&#125;#}
+                {#<td>#}
+                {#<a href="{{ path('show_province', { 'province': promesse.province.id }) }}">{{ promesse.province.name }}</a>#}
+                {#</td>#}
+                {#<td>#}
+                {#<a href="{{ path('show_region', { 'region': promesse.region.id }) }}">{{ promesse.region.name }}</a>#}
+                {#</td>#}
+                {#<td>#}
+                {#<a href="{{ path('show_district', { 'district': promesse.district.id }) }}">{{ promesse.district.name }}</a>#}
+                {#</td>#}
+                {#</tr>#}
+                {#{% endfor %}#}
+                {#</tbody>#}
+                {#</table>#}
+                {#</div>#}
+                {#</div>#}
+                {#</div>#}
+            </div>
+        </div>
+    </div>
+{% endblock %}

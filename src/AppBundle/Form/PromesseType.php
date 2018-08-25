@@ -5,6 +5,7 @@ namespace AppBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -26,11 +27,11 @@ class PromesseType extends AbstractType
     {
         $builder
             ->add('name', TextType::class)
-            ->add('description', TextType::class)
+            ->add('description', TextareaType::class)
             ->add('date', DateType::class, array(
 //                'widget' => 'single_text',
 //                'attr' => array('class' => 'js-datepicker'),
-                'format' => 'dd/MM/yyyy',
+                'format' => 'dd MM yyyy',
 //                'html5' => false,
             ))
             ->add('province', EntityType::class, array(

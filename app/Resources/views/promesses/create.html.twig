@@ -1,69 +1,58 @@
 {% extends 'base.html.twig' %}
-{% block title %}Projets des societés | Madagascar{% endblock %}
 {% block body %}
-    <div class="row">
-        <div id="formulaire" class="col-md-6 col-md-offset-3">
-            <div class="well well-sm">
-                {{ form_start(form, { 'attr': {'class': 'form-horizontal'} }) }}
-                <fieldset>
-                    <legend class="text-center form-legend">Ajouter un Projets des societés</legend>
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-stretch grid-margin">
+                    <div class="row flex-grow">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Ajouter un Projets des societés</h4>
 
-                    <div class="form-group">
-                        <label class="col-md-3 control-label" for="name">Nom</label>
+                                    <p class="card-description">
+                                    </p>
+                                    {{ form_start(form, { 'attr': {'class': 'forms-sample'} }) }}
+                                    <div class="form-group">
+                                        <label for="name">Nom</label>
+                                        {{ form_widget(form.name, { 'attr': {'class': 'form-control', 'placeholder': 'Nom'} }) }}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="description">Déscription</label>
+                                        {{ form_widget(form.description, { 'attr': {'class': 'form-control', 'placeholder': 'Déscription'} }) }}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="date">Date</label>
+                                        <small class="text-danger">
+                                            {{ form_errors(form.date) }}
+                                        </small>
+                                        {{ form_widget(form.date, { 'attr': {'placeholder': 'Date', 'class': 'form-control'} }) }}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="province">Province</label>
+                                        {{ form_widget(form.province, { 'attr': {'class': 'form-control', 'placeholder': 'Province'} }) }}
+                                    </div>
 
-                        <div class="col-md-9">
-                            {{ form_widget(form.name, { 'attr': {'class': 'form-control', 'placeholder': 'Nom'} }) }}
+                                    <div class="form-group">
+                                        <label for="province">Région</label>
+                                        {{ form_widget(form.region, { 'attr': {'class': 'form-control', 'placeholder': 'Région'} }) }}
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="province">District</label>
+                                        {{ form_widget(form.district, { 'attr': {'class': 'form-control', 'placeholder': 'District'} }) }}
+                                    </div>
+
+                                    <button type="submit" class="btn btn-success pull-right">Enregistrer</button>
+                                    {{ form_end(form) }}
+                                    <a href="{{ path('list_promesse') }}" class="btn btn-default pull-left"><span
+                                                class="fa fa-arrow-left"></span>
+                                        Annuler</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="form-group">
-                        <label class="col-md-3 control-label" for="description">Déscription</label>
-
-                        <div class="col-md-9">
-                            {{ form_widget(form.description, { 'attr': {'class': 'form-control', 'placeholder': 'Déscription'} }) }}
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-md-3 control-label" for="region">Date</label>
-
-                        <div class="col-md-9">
-                            {{ form_widget(form.date, { 'attr': {'placeholder': 'Date'} }) }}
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-md-3 control-label" for="province">Province</label>
-
-                        <div class="col-md-9">
-                            {{ form_widget(form.province, { 'attr': {'class': 'form-control', 'placeholder': 'Province'} }) }}
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-md-3 control-label" for="province">Région</label>
-
-                        <div class="col-md-9">
-                            {{ form_widget(form.region, { 'attr': {'class': 'form-control', 'placeholder': 'Région'} }) }}
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-md-3 control-label" for="district">District</label>
-
-                        <div class="col-md-9">
-                            {{ form_widget(form.district, { 'attr': {'class': 'form-control', 'placeholder': 'District'} }) }}
-                        </div>
-                    </div>
-
-                    <!-- Form actions -->
-                    <div class="form-group">
-                        <div class="col-md-12 text-right">
-                            <button type="submit" class="btn btn-primary btn-lg">Enregistrer</button>
-                        </div>
-                    </div>
-                </fieldset>
-                {{ form_end(form) }}
+                </div>
             </div>
         </div>
     </div>

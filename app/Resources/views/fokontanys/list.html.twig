@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Liste des Fokontany</h4>
+
+                            <p class="card-description">
+                                <a href="{{ path('create_fokontany') }}" class="btn btn-success pull-left"><span
+                                            class="fa fa-plus"></span>
+                                    Ajouter un Fokontany</a>
+                            </p>
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>Nom</th>
+                                    <th>Commune</th>
+                                    <th>Nombre d'habitants</th>
+                                    <th>Nombre d'electeurs</th>
+                                    <th>Pourcentage dernière election</th>
+                                    <th class="text-center">#</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for fokontany in fokontanys %}
+                                    <tr>
+                                        <td>
+                                            <a href="{{ path('show_fokontany', { 'fokontany': fokontany.id }) }}">{{ fokontany.name }}</a>
+                                        </td>
+                                        <td>
+                                            <a href="{{ path('show_commune', { 'commune': fokontany.commune.id }) }}">{{ fokontany.commune.name }}</a>
+                                        </td>
+                                        <td>{{ fokontany.habitants }}</td>
+                                        <td>{{ fokontany.lecteurs }}</td>
+                                        <td>{{ fokontany.dernierElection }}%</td>
+                                        <td class="text-center">
+                                            <a class='btn btn-primary btn-xs'
+                                               href="{{ path('edit_fokontany', { 'fokontany': fokontany.id }) }}"><span
+                                                        class="fa fa-pencil-square-o"></span> Modifier</a>
+                                            <a href="{{ path('delete_fokontany', { 'fokontany': fokontany.id }) }}"
+                                               class="btn btn-danger btn-xs"><span
+                                                        class="fa fa-remove"> Supprimer</span></a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -22,6 +22,7 @@ class MainController extends Controller
     {
         return $this->render('default/index.html.twig', [
             'value' => $this->path,
+            'title' => 'Accueil | Madagascar',
         ]);
     }
 
@@ -40,7 +41,8 @@ class MainController extends Controller
             'value' => 'stat',
             'province_datas' => $province_datas,
             'region_datas' => $region_datas,
-            'district_datas' => $district_datas
+            'district_datas' => $district_datas,
+            'title' => 'Statistique | Madagascar',
         ]);
     }
 
@@ -58,7 +60,8 @@ class MainController extends Controller
         $chart[2] = $statistique->getDistrictHist($em);
         return $this->render('default/hist.html.twig', [
             'value' => 'stat',
-            'histogram' => $chart
+            'histogram' => $chart,
+            'title' => 'Histogramme | Madagascar',
         ]);
     }
 

@@ -26,6 +26,7 @@ class SecurityController extends Controller
                 array(
                     'last_username' => $helper->getLastUsername(),
                     'error' => $helper->getLastAuthenticationError(),
+                    'title' => 'Se connecter | Madagascar',
                 )
             );
         }

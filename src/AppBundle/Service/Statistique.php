@@ -17,7 +17,7 @@ class Statistique
                     pr.name \"PROVINCE\",
                     count(pm.id) \"A FAIRE\",
                     count(CASE WHEN pm.etat = 1 THEN 1 END) \"FAIT\",
-                    ((count(CASE WHEN pm.etat = 1 THEN 1 END) / count(pm.id)) * 100) \"POURCENTAGE\"
+                    round(((count(CASE WHEN pm.etat = 1 THEN 1 END) / count(pm.id)) * 100),2) \"POURCENTAGE\"
                     FROM promesse pm
                     LEFT JOIN province pr ON pr.id = pm.province_id
                     GROUP BY pr.name
@@ -36,7 +36,7 @@ class Statistique
                 rg.name \"REGION\",
                 count(pm.id) \"A FAIRE\",
                 count(CASE WHEN pm.etat = 1 THEN 1 END) \"FAIT\",
-                ((count(CASE WHEN pm.etat = 1 THEN 1 END) / count(pm.id)) * 100) \"POURCENTAGE\"
+                round(((count(CASE WHEN pm.etat = 1 THEN 1 END) / count(pm.id)) * 100),2) \"POURCENTAGE\"
                 FROM promesse pm
                 LEFT JOIN region rg ON rg.id = pm.region_id
                 GROUP BY rg.name
@@ -55,7 +55,7 @@ class Statistique
                 rg.name \"DISTRICT\",
                 count(pm.id) \"A FAIRE\",
                 count(CASE WHEN pm.etat = 1 THEN 1 END) \"FAIT\",
-                ((count(CASE WHEN pm.etat = 1 THEN 1 END) / count(pm.id)) * 100) \"POURCENTAGE\"
+                round(((count(CASE WHEN pm.etat = 1 THEN 1 END) / count(pm.id)) * 100),2) \"POURCENTAGE\"
                 FROM promesse pm
                 LEFT JOIN district rg ON rg.id = pm.district_id
                 GROUP BY rg.name
@@ -84,11 +84,12 @@ class Statistique
         $statement = $em->getConnection()->prepare($sql_region);
         $statement->execute();
         $region_datas = $statement->fetchAll();
-        $stat_array = array(array('Region', 'Pourcentage'));
+        $stat_array = array();
         foreach ($region_datas as $data) {
             array_push($stat_array, array($data['REGION'], $data['POURCENTAGE']));
         }
-        return $this->setHist('Projets des societés par region', $stat_array);
+        return $stat_array;
+//        return $this->setHist('Projets des societés par region', $stat_array);
     }
 
     public function getDistrictHist($em)
@@ -108,11 +109,12 @@ class Statistique
         $statement = $em->getConnection()->prepare($sql_district);
         $statement->execute();
         $district_datas = $statement->fetchAll();
-        $stat_array = array(array('District', 'Pourcentage'));
+        $stat_array = array();
         foreach ($district_datas as $data) {
             array_push($stat_array, array($data['DISTRICT'], $data['POURCENTAGE']));
         }
-        return $this->setHist('Projets des societés par district', $stat_array);
+        return $stat_array;
+//        return $this->setHist('Projets des societés par district', $stat_array);
     }
 
     public function getProvinceHist($em)
@@ -132,11 +134,14 @@ class Statistique
         $statement = $em->getConnection()->prepare($sql);
         $statement->execute();
         $province_datas = $statement->fetchAll();
-        $stat_array = array(array('Province', 'Pourcentage'));
+//        $stat_array = array(array('Province', 'Pourcentage'));
+        $stat_array = array();
         foreach ($province_datas as $data) {
             array_push($stat_array, array($data['PROVINCE'], $data['POURCENTAGE']));
         }
-        return $this->setHist('Projets des societés par province', $stat_array);
+        return $stat_array;
+//            var_dump($stat_array);die;
+//        return $this->setHist('Projets des societés par province', $stat_array);
     }
 
     public function getProvinceCam($em)
@@ -163,12 +168,6 @@ class Statistique
             array_push($stat_array2, [$data['PROVINCE'], floatval($data['FAIT'])]);
         }
 
-//        var_dump($stat_array);die;
-//        $stat_array = [
-//            ['Province', 'Pourcentage'],
-//            ['Fianarantsoa', 75],
-//            ['Antananarivo', 80],
-//        ];
         $pieChart = new PieChart();
         $pieChart->getData()->setArrayToDataTable($stat_array);
         $pieChart->getOptions()->setTitle("Projets des societés à faire par provinces");

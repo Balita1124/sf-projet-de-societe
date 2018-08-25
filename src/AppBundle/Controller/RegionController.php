@@ -22,7 +22,8 @@ class RegionController extends Controller
         $regions = $em->getRepository('AppBundle:Region')->findAll();
         return $this->render('regions/list.html.twig', [
             'regions' => $regions,
-            'value' => $this->path
+            'value' => $this->path,
+            'title' => 'Projets | Madagascar',
         ]);
     }
 
@@ -39,7 +40,8 @@ class RegionController extends Controller
         }
         return $this->render('regions/show.html.twig', [
             'region' => $region,
-            'value' => $this->path
+            'value' => $this->path,
+            'title' => 'Projets | Madagascar',
         ]);
     }
 
@@ -69,7 +71,8 @@ class RegionController extends Controller
         }
         return $this->render('regions/create.html.twig', [
             'form' => $form->createView(),
-            'value' => $this->path
+            'value' => $this->path,
+            'title' => 'Projets | Madagascar',
         ]);
     }
 
@@ -95,7 +98,8 @@ class RegionController extends Controller
         }
         return $this->render('regions/edit.html.twig', [
             'form' => $form->createView(),
-            'value' => $this->path
+            'value' => $this->path,
+            'title' => 'Projets | Madagascar',
         ]);
     }
 

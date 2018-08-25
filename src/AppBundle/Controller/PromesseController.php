@@ -22,7 +22,8 @@ class PromesseController extends Controller
         $promesses = $em->getRepository('AppBundle:Promesse')->findAll();
         return $this->render('promesses/list.html.twig', [
             'promesses' => $promesses,
-            'value' => $this->path
+            'value' => $this->path,
+            'title' => 'Projets | Madagascar',
         ]);
     }
 
@@ -39,7 +40,8 @@ class PromesseController extends Controller
         }
         return $this->render('promesses/show.html.twig', [
             'promesse' => $promesse,
-            'value' => $this->path
+            'value' => $this->path,
+            'title' => 'Projets | Madagascar',
         ]);
     }
 
@@ -68,7 +70,8 @@ class PromesseController extends Controller
         }
         return $this->render('promesses/create.html.twig', [
             'form' => $form->createView(),
-            'value' => $this->path
+            'value' => $this->path,
+            'title' => 'Projets | Madagascar',
         ]);
     }
 
@@ -94,7 +97,8 @@ class PromesseController extends Controller
         }
         return $this->render('promesses/edit.html.twig', [
             'form' => $form->createView(),
-            'value' => $this->path
+            'value' => $this->path,
+            'title' => 'Projets | Madagascar',
         ]);
     }
 

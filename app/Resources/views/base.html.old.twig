@@ -1,0 +1,123 @@
+{% import _self as is_active %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>{% block title %}Madagascar{% endblock %}</title>
+    {% block stylesheets %}
+        {#<meta charset="utf-8">#}
+        {#<meta http-equiv="X-UA-Compatible" content="IE=edge">#}
+        {#<meta name="viewport" content="width=device-width, initial-scale=1">#}
+        {#<script src="{{ asset('public/js/jquery-1.11.1.min.js') }}"></script>#}
+        {#<link href="{{ asset('public/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" id="bootstrap-css">#}
+        {#<link href="{{ asset('public/bootstrap/css/bootstrap-datepicker.css') }}" rel="stylesheet">#}
+        {#<script src="{{ asset('public/bootstrap/js/bootstrap.min.js') }}"></script>#}
+
+
+        {#<link rel="icon" type="image/png" href="{{ asset('public/img/mg.png') }}"/>#}
+
+        {#<link rel="stylesheet" href="{{ asset('public/css/application.css') }}">#}
+        {#<!------ Include the above in your HEAD tag ---------->#}
+
+        {#<link href="{{ asset('public/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet"#}
+              {#integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1"#}
+              {#crossorigin="anonymous">#}
+    {% endblock %}
+</head>
+<body class="home">
+<div class="container-fluid display-table">
+    <div class="row display-table-row">
+        {#<div class="user-dashboard">#}
+        {% if(app.user!=null) %}
+            <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
+                <div class="logo">
+                    <a hef="home.html">
+                        {#<img src="{{ asset('public/img/drapeau.png') }}" alt="merkery_logo"#}
+                             {#class="hidden-xs hidden-sm">#}
+                        <img src="{{ asset('public/img/hery-rajaonarimampianinaa-hvm.jpg') }}" alt="merkery_logo"
+                        class="hidden-xs hidden-sm">
+                        {#<img src="{{ asset('public/img/hery-rajaonarimampianina-hvm.jpg') }}" alt="logo"#}
+                        {#class="visible-xs visible-sm circle-logo">#}
+                    </a>
+                </div>
+                <div class="navi">
+                    <ul>
+                        <li {{ is_active("main", value) }}><a href="{{ path('accueil') }}">
+                                <i class="fa fa-home" aria-hidden="true"></i><span
+                                        class="hidden-xs hidden-sm">Accueil</span></a></li>
+                        <li {{ is_active("province", value) }}><a href="{{ path('list_province') }}"><i
+                                        class="fa fa-tasks"
+                                        aria-hidden="true"></i><span
+                                        class="hidden-xs hidden-sm">Provinces</span></a>
+                        </li>
+                        <li {{ is_active("region", value) }}><a href="{{ path('list_region') }}"><i
+                                        class="fa fa-tasks"
+                                        aria-hidden="true"></i><span
+                                        class="hidden-xs hidden-sm">Regions</span></a>
+                        </li>
+                        <li {{ is_active("district", value) }}><a href="{{ path('list_district') }}"><i
+                                        class="fa fa-tasks"
+                                        aria-hidden="true"></i><span
+                                        class="hidden-xs hidden-sm">Districts</span></a>
+                        </li>
+                        <li {{ is_active("commune", value) }}><a href="{{ path('list_commune') }}"><i
+                                        class="fa fa-tasks"
+                                        aria-hidden="true"></i><span
+                                        class="hidden-xs hidden-sm">Communes</span></a>
+                        </li>
+                        <li {{ is_active("promesse", value) }}><a href="{{ path('list_promesse') }}"><i
+                                        class="fa fa-tasks" aria-hidden="true"></i><span
+                                        class="hidden-xs hidden-sm">Projets des societés</span></a>
+                        <li {{ is_active("stat", value) }}><a href="{{ path('stat') }}"><i
+                                        class="fa fa-bar-chart" aria-hidden="true"></i><span
+                                        class="hidden-xs hidden-sm">Statistiques</span></a>
+                        </li>
+                        {#<li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Setting</span></a>#}
+                        {#</li>#}
+                    </ul>
+                </div>
+            </div>
+        {% endif %}
+        <div class="col-md-10 col-sm-11 display-table-cell v-align">
+            {#<button type="button" class="slide-toggle">Slide Toggle</button>#}
+            <div class="row">
+                <header>
+                    <div class="col-md-7">
+                        <nav class="navbar-default pull-left">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="offcanvas"
+                                        data-target="#side-menu" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                        </nav>
+                        {#<div class="search hidden-xs hidden-sm">#}
+                        {#<input type="text" placeholder="Search" id="search">#}
+                        {#</div>#}
+                    </div>
+                    {% if(app.user!=null) %}
+                        <div class="col-md-5">
+                            <div class="header-rightside">
+                                <ul class="list-inline header-top pull-right">
+                                    <i class="fa fa-user" aria-hidden="true"></i> {{ app.user.name }}
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('logout') }}">Deconnexion</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    {% endif %}
+                </header>
+            </div>
+            {% block body %}{% endblock %}
+            {#<script src="{{ asset('public/bootstrap/js/bootstrap-datepicker.min.js') }}"></script>#}
+            {#<script src="{{ asset('public/js/application.js') }}"></script>#}
+        </div>
+    </div>
+</div>
+</body>
+</html>

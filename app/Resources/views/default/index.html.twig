@@ -1,50 +1,110 @@
 {% extends 'base.html.twig' %}
-{% block title %}Accueil | Madagascar{% endblock %}
+{#{% block title %}Accueil | Madagascar{% endblock %}#}
 {% block body %}
-    <h1 class="entete-title">Accueil</h1>
+    <div class="main-panel">
+        <div class="content-wrapper">
+            {#<div class="row">#}
+                {#<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 grid-margin stretch-card">#}
+                    {#<div class="card card-statistics">#}
+                        {#<div class="card-body">#}
+                            {#<div class="clearfix">#}
+                                {#<div class="float-left">#}
+                                    {#<i class="mdi mdi-cube text-danger icon-lg"></i>#}
+                                {#</div>#}
+                                {#<div class="float-right">#}
+                                    {#<p class="card-text text-right">Nombre de province</p>#}
 
-    <div class="row">
-        {#<div class="row col-md-6 col-md-offset-2 custyle">#}
-            {#<h3 class="section-title">Statistique par province</h3>#}
-            {#<table class="table table-striped custab">#}
-                {#<thead>#}
-                {#<tr>#}
-                    {#<th>PROVINCE</th>#}
-                    {#<th>A FAIRE</th>#}
-                    {#<th>FAIT</th>#}
-                    {#<th>POURCENTAGE</th>#}
-                {#</tr>#}
-                {#</thead>#}
-                {#{% for data in province_datas %}#}
-                    {#<tr>#}
-                        {#<td>{{ data['PROVINCE'] }}</td>#}
-                        {#<td>{{ data['A FAIRE'] }}</td>#}
-                        {#<td>{{ data['FAIT'] }}</td>#}
-                        {#<td>{{ data['POURCENTAGE'] }} %</td>#}
-                    {#</tr>#}
-                {#{% endfor %}#}
-            {#</table>#}
-        {#</div>#}
-        {#<div class="row col-md-6 col-md-offset-2 custyle">#}
-            {#<h3 class="section-title">Statistique par region</h3>#}
-            {#<table class="table table-striped custab">#}
-                {#<thead>#}
-                {#<tr>#}
-                    {#<th>REGION</th>#}
-                    {#<th>A FAIRE</th>#}
-                    {#<th>FAIT</th>#}
-                    {#<th>POURCENTAGE</th>#}
-                {#</tr>#}
-                {#</thead>#}
-                {#{% for data in region_datas %}#}
-                    {#<tr>#}
-                        {#<td>{{ data['REGION'] }}</td>#}
-                        {#<td>{{ data['A FAIRE'] }}</td>#}
-                        {#<td>{{ data['FAIT'] }}</td>#}
-                        {#<td>{{ data['POURCENTAGE'] }} %</td>#}
-                    {#</tr>#}
-                {#{% endfor %}#}
-            {#</table>#}
-        {#</div>#}
+                                    {#<div class="fluid-container">#}
+                                        {#<h3 class="card-title font-weight-bold text-right mb-0">06</h3>#}
+                                    {#</div>#}
+                                {#</div>#}
+                            {#</div>#}
+                            {#<p class="text-muted mt-3">#}
+                                {#<i class="mdi mdi-alert-octagon mr-1" aria-hidden="true"></i> 65% lower growth#}
+                            {#</p>#}
+                        {#</div>#}
+                    {#</div>#}
+                {#</div>#}
+                {#<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 grid-margin stretch-card">#}
+                    {#<div class="card card-statistics">#}
+                        {#<div class="card-body">#}
+                            {#<div class="clearfix">#}
+                                {#<div class="float-left">#}
+                                    {#<i class="mdi mdi-receipt text-warning icon-lg"></i>#}
+                                {#</div>#}
+                                {#<div class="float-right">#}
+                                    {#<p class="card-text text-right">Orders</p>#}
+
+                                    {#<div class="fluid-container">#}
+                                        {#<h3 class="card-title font-weight-bold text-right mb-0">3455</h3>#}
+                                    {#</div>#}
+                                {#</div>#}
+                            {#</div>#}
+                            {#<p class="text-muted mt-3">#}
+                                {#<i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i> Product-wise#}
+                                {#sales#}
+                            {#</p>#}
+                        {#</div>#}
+                    {#</div>#}
+                {#</div>#}
+                {#<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 grid-margin stretch-card">#}
+                    {#<div class="card card-statistics">#}
+                        {#<div class="card-body">#}
+                            {#<div class="clearfix">#}
+                                {#<div class="float-left">#}
+                                    {#<i class="mdi mdi-poll-box text-teal icon-lg"></i>#}
+                                {#</div>#}
+                                {#<div class="float-right">#}
+                                    {#<p class="card-text text-right">Sales</p>#}
+
+                                    {#<div class="fluid-container">#}
+                                        {#<h3 class="card-title font-weight-bold text-right mb-0">5693</h3>#}
+                                    {#</div>#}
+                                {#</div>#}
+                            {#</div>#}
+                            {#<p class="text-muted mt-3">#}
+                                {#<i class="mdi mdi-calendar mr-1" aria-hidden="true"></i> Weekly Sales#}
+                            {#</p>#}
+                        {#</div>#}
+                    {#</div>#}
+                {#</div>#}
+                {#<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 grid-margin stretch-card">#}
+                    {#<div class="card card-statistics">#}
+                        {#<div class="card-body">#}
+                            {#<div class="clearfix">#}
+                                {#<div class="float-left">#}
+                                    {#<i class="mdi mdi-account-location text-info icon-lg"></i>#}
+                                {#</div>#}
+                                {#<div class="float-right">#}
+                                    {#<p class="card-text text-right">Employees</p>#}
+
+                                    {#<div class="fluid-container">#}
+                                        {#<h3 class="card-title font-weight-bold text-right mb-0">246</h3>#}
+                                    {#</div>#}
+                                {#</div>#}
+                            {#</div>#}
+                            {#<p class="text-muted mt-3">#}
+                                {#<i class="mdi mdi-reload mr-1" aria-hidden="true"></i> Product-wise sales#}
+                            {#</p>#}
+                        {#</div>#}
+                    {#</div>#}
+                {#</div>#}
+            {#</div>#}
+            {#<div class="row">#}
+                {#<div class="col-md-12 grid-margin stretch-card">#}
+                    {#<div class="card">#}
+                        {#<div class="card-body">#}
+                            {#<img src="{{ asset('public/images/hery-rajaonarimampianina-hvm.jpg') }}" alt="Rajaonarimampianina"#}
+                                 {#class="img img-responsive hidden-xs hidden-sm">#}
+                        {#</div>#}
+                    {#</div>#}
+                {#</div>#}
+            {#</div>#}
+        </div>
+        <footer class="footer">
+            <div class="container-fluid clearfix">
+                <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2018</span>
+            </div>
+        </footer>
     </div>
 {% endblock %}
