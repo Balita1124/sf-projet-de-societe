@@ -21,18 +21,6 @@
                                         <label for="commune">Commune</label>
                                         {{ form_widget(form.commune, { 'attr': {'class': 'form-control', 'placeholder': 'Commune'} }) }}
                                     </div>
-                                    <div class="form-group">
-                                        <label for="habitants">Nombre habitants</label>
-                                        {{ form_widget(form.habitants, { 'attr': {'class': 'form-control', 'placeholder': 'Nombre habitants'} }) }}
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="lecteurs">Nombre Electeurs</label>
-                                        {{ form_widget(form.lecteurs, { 'attr': {'class': 'form-control', 'placeholder': 'Nombre Electeurs'} }) }}
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="dernierElection">Pourcentage dernière election</label>
-                                        {{ form_widget(form.dernierElection, { 'attr': {'class': 'form-control', 'placeholder': 'Pourcentage dernière election'} }) }}
-                                    </div>
                                     <button type="submit" class="btn btn-success pull-right">Enregistrer</button>
                                     {{ form_end(form) }}
                                     <a href="{{ path('list_fokontany') }}" class="btn btn-default pull-left"><span

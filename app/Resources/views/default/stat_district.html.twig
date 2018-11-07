@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title text-gray">Statistique</h3>
+                            {#                        <li class="menu-stat"><a href="{{ path('stat') }}">General</a></li>#}
+                            <li class="menu-stat"><a href="{{ path('stat', { 'id': 1 }) }}">General</a></li>
+                            <li class="menu-stat"><a href="{{ path('stat', { 'id': 2 }) }}">Province</a></li>
+                            <li class="menu-stat"><a href="{{ path('stat', { 'id': 3 }) }}">Region</a></li>
+                            <li class="menu-stat"><a href="{{ path('stat', { 'id': 4 }) }}">District</a></li>
+                            <li class="menu-stat"><a href="{{ path('stat', { 'id': 5 }) }}">Commune</a></li>
+                            <li class="menu-stat"><a href="{{ path('stat', { 'id': 6 }) }}">Fokontany</a></li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title text-behance">Statistique par District</h4>
+                            <table class="table">
+                                <thead>
+                                    <tr class="text-dark">
+                                        <th>DISTRICT</th>
+                                        <th>REGION</th>
+                                        <th>NB</th>
+                                        <th>Votants</th>
+                                        <th>Numero 12</th>
+                                        <th>Numero 13</th>
+                                        <th>Numero 25</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for data in district_datas %}
+                                        <tr>
+                                            <td>{{ data['DISTRICT'] }}</td>
+                                            <td>{{ data['REGION'] }}</td>
+                                            <td>{{ data['NB'] }}</td>
+                                            <td>{{ data['Total'] }}</td>
+                                            <td>{{ data['Valeur12'] }} ({{ data['Valeur12'] * 100 / data['Total'] }} %)</td>
+                                            <td>{{ data['Valeur13'] }} ({{ data['Valeur13'] * 100 / data['Total'] }} %)</td>
+                                            <td>{{ data['Valeur25'] }} ({{ data['Valeur25'] * 100 / data['Total'] }} %)</td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

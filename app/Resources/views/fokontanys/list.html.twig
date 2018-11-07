@@ -18,9 +18,6 @@
                                 <tr>
                                     <th>Nom</th>
                                     <th>Commune</th>
-                                    <th>Nombre d'habitants</th>
-                                    <th>Nombre d'electeurs</th>
-                                    <th>Pourcentage dernière election</th>
                                     <th class="text-center">#</th>
                                 </tr>
                                 </thead>
@@ -33,9 +30,6 @@
                                         <td>
                                             <a href="{{ path('show_commune', { 'commune': fokontany.commune.id }) }}">{{ fokontany.commune.name }}</a>
                                         </td>
-                                        <td>{{ fokontany.habitants }}</td>
-                                        <td>{{ fokontany.lecteurs }}</td>
-                                        <td>{{ fokontany.dernierElection }}%</td>
                                         <td class="text-center">
                                             <a class='btn btn-primary btn-xs'
                                                href="{{ path('edit_fokontany', { 'fokontany': fokontany.id }) }}"><span

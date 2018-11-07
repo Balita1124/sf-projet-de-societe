@@ -24,28 +24,11 @@ class CommuneType extends AbstractType
     {
         $builder
             ->add('name', TextType::class)
-            ->add('population', IntegerType::class)
-            ->add('electeurs', IntegerType::class)
-            ->add('freqrnm', TextType::class, array(
-                'required' => false
-            ))
             ->add('district', EntityType::class, array(
                 'class' => District::class,
                 'choice_label' => 'name',
             ))
-            ->add('rnm', CheckboxType::class, array(
-                'required' => false
-
-            ))
-            ->add('hvm', CheckboxType::class, array(
-                'required' => false
-            ))
-            ->add('tvm', CheckboxType::class, array(
-                'required' => false
-            ))//            ->add('submit', SubmitType::class)
-            ->add('observation', TextType::class, array(
-                'required' => false
-            ));
+                ;
     }
 
     public function configureOptions(OptionsResolver $resolver)

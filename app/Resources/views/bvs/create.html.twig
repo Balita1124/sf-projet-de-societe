@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-stretch grid-margin">
+                    <div class="row flex-grow">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Ajouter un Bureau de Vote</h4>
+
+                                    <p class="card-description">
+                                    </p>
+                                    {{ form_start(form, { 'attr': {'class': 'forms-sample'} }) }}
+                                    <div class="form-group">
+                                        <label for="name">BV</label>
+                                        {{ form_widget(form.name, { 'attr': {'class': 'form-control', 'placeholder': 'BV'} }) }}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name">Code BV</label>
+                                        {{ form_widget(form.code, { 'attr': {'class': 'form-control', 'placeholder': 'Code BV'} }) }}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="fokontany">Fokontany</label>
+                                        {{ form_widget(form.fokontany, { 'attr': {'class': 'form-control', 'placeholder': 'Fokontany'} }) }}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="electeurs">Electeurs inscrits</label>
+                                        {{ form_widget(form.electeurs, { 'attr': {'class': 'form-control', 'placeholder': 'Electeurs inscrits'} }) }}
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="votants">Electeurs qui ont votés</label>
+                                        {{ form_widget(form.votants, { 'attr': {'class': 'form-control', 'placeholder': 'Electeurs qui ont votés'} }) }}
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="voix12">Numero 12</label>
+                                        {{ form_widget(form.voix12, { 'attr': {'class': 'form-control', 'placeholder': 'Numero 12'} }) }}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="voix13">Numero 13</label>
+                                        {{ form_widget(form.voix13, { 'attr': {'class': 'form-control', 'placeholder': 'Numero 13'} }) }}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="voix25">Numero 25</label>
+                                        {{ form_widget(form.voix25, { 'attr': {'class': 'form-control', 'placeholder': 'Numero 25'} }) }}
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="voixautre">Autres</label>
+                                        {{ form_widget(form.voixautre, { 'attr': {'class': 'form-control', 'placeholder': 'Autres'} }) }}
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="voixfotsy">Vato fotsy</label>
+                                        {{ form_widget(form.voixfotsy, { 'attr': {'class': 'form-control', 'placeholder': 'Vato fotsy'} }) }}
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="voixmaty">Vato maty</label>
+                                        {{ form_widget(form.voixmaty, { 'attr': {'class': 'form-control', 'placeholder': 'Vato maty'} }) }}
+                                    </div>
+                                    
+                                    <button type="submit" class="btn btn-success pull-right">Enregistrer</button>
+                                    {{ form_end(form) }}
+                                    <a href="{{ path('list_fokontany') }}" class="btn btn-default pull-left"><span
+                                            class="fa fa-arrow-left"></span>
+                                        Annuler</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

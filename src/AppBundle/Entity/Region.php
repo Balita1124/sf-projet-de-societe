@@ -48,18 +48,9 @@ class Region
      */
     private $districts;
 
-    /**
-     * @var ArrayCollection $promesses
-     *
-     * @ORM\OneToMany(targetEntity="Promesse", mappedBy="region", cascade={"persist", "remove", "merge"})
-     */
-    private $promesses;
-
-
     public function __construct()
     {
         $this->districts = new ArrayCollection();
-        $this->promesses = new ArrayCollection();
     }
 
     /**
@@ -83,22 +74,6 @@ class Region
         return $this->districts;
     }
 
-    public function addPromesse(Promesse $promesse)
-    {
-        $promesse->setRegion($this);
-
-        // Si l'objet fait déjà partie de la collection on ne l'ajoute pas
-        if (!$this->promesses->contains($promesse)) {
-            $this->promesses->add($promesse);
-        }
-    }
-    /**
-     * @return ArrayCollection $promesses
-     */
-    public function getPromesses()
-    {
-        return $this->promesses;
-    }
     /**
      * @return mixed
      */

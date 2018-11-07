@@ -29,9 +29,6 @@ class FokontanyType extends AbstractType
                 'class' => Commune::class,
                 'choice_label' => 'name',
             ))
-            ->add('habitants', IntegerType::class)
-            ->add('lecteurs', IntegerType::class)
-            ->add('dernierElection', IntegerType::class)
         ;
     }
 

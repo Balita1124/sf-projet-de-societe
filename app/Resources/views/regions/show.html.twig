@@ -53,7 +53,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-12 grid-margin stretch-card">
+                {#<div class="col-lg-12 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title text-primary"><u>Projets des societés dans la region</u></h4>
@@ -65,7 +65,7 @@
                                 <tr>
                                     <th>Nom</th>
                                     <th>Description</th>
-                                    {#<th>Date</th>#}
+                                    {#<th>Date</th>}
                                     <th>Province</th>
                                     <th>Region</th>
                                     <th>District</th>
@@ -76,7 +76,7 @@
                                     <tr>
                                         <td>{{ promesse.name }}</td>
                                         <td>{{ promesse.description }}</td>
-                                        {#<td>{{ promesse.date }}</td>#}
+                                        {#<td>{{ promesse.date }}</td>}
                                         <td>
                                             <a href="{{ path('show_province', { 'province': promesse.province.id }) }}">{{ promesse.province.name }}</a>
                                         </td>
@@ -92,7 +92,7 @@
                             </table>
                         </div>
                     </div>
-                </div>
+                </div>#}
             </div>
         </div>
     </div>

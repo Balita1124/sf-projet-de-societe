@@ -19,11 +19,6 @@
                                 <tr>
                                     <th>Nom</th>
                                     <th>Région</th>
-                                    <th>Population</th>
-                                    <th>Electeurs</th>
-                                    <th>Nombre EPP</th>
-                                    <th>Nombre CEG</th>
-                                    <th>Nombre Lycee</th>
                                     <th class="text-center">#</th>
                                 </tr>
                                 </thead>
@@ -36,11 +31,6 @@
                                         <td>
                                             <a href="{{ path('show_region', { 'region': district.region.id }) }}">{{ district.region.name }}</a>
                                         </td>
-                                        <td>{{ district.population }}</td>
-                                        <td>{{ district.electeurs }}</td>
-                                        <td>{{ district.nbEpp }}</td>
-                                        <td>{{ district.nbCeg }}</td>
-                                        <td>{{ district.nbLycee }}</td>
                                         <td class="text-center">
                                             <a class='btn btn-primary btn-xs'
                                                href="{{ path('edit_district', { 'district': district.id }) }}"><span

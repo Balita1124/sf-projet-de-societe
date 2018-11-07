@@ -35,19 +35,11 @@ class Province
     private $regions;
 
     /**
-     * @var ArrayCollection $region
-     *
-     * @ORM\OneToMany(targetEntity="Promesse", mappedBy="province", cascade={"persist", "remove", "merge"})
-     */
-    private $promesses;
-
-    /**
      * Province constructor.
      */
     public function __construct()
     {
         $this->regions = new ArrayCollection();
-        $this->promesses = new ArrayCollection();
     }
 
     /**
@@ -69,24 +61,6 @@ class Province
     {
         return $this->regions;
     }
-
-    public function addPromesse(Promesse $promesse)
-    {
-        $promesse->setProvince($this);
-
-        // Si l'objet fait déjà partie de la collection on ne l'ajoute pas
-        if (!$this->promesses->contains($promesse)) {
-            $this->promesses->add($promesse);
-        }
-    }
-    /**
-     * @return ArrayCollection $promesses
-     */
-    public function getPromesses()
-    {
-        return $this->promesses;
-    }
-
     /**
      * @return mixed
      */

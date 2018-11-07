@@ -21,26 +21,6 @@
                                         <label for="region">Région</label>
                                         {{ form_widget(form.region, { 'attr': {'class': 'form-control', 'placeholder': 'Région'} }) }}
                                     </div>
-                                    <div class="form-group">
-                                        <label for="population">Population</label>
-                                        {{ form_widget(form.population, { 'attr': {'class': 'form-control', 'placeholder': 'Population'} }) }}
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="electeurs">Electeurs</label>
-                                        {{ form_widget(form.electeurs, { 'attr': {'class': 'form-control', 'placeholder': 'Electeurs'} }) }}
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="nbEpp">Nombre EPP</label>
-                                        {{ form_widget(form.nbEpp, { 'attr': {'class': 'form-control', 'placeholder': 'Nombre EPP'} }) }}
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="nbCeg">Nombre CEG</label>
-                                        {{ form_widget(form.nbCeg, { 'attr': {'class': 'form-control', 'placeholder': 'Nombre CEG'} }) }}
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="nbLycee">Nombre Lycee</label>
-                                        {{ form_widget(form.nbLycee, { 'attr': {'class': 'form-control', 'placeholder': 'Nombre Lycee'} }) }}
-                                    </div>
                                     <button type="submit" class="btn btn-success pull-right">Enregistrer</button>
                                     {{ form_end(form) }}
                                     <a href="{{ path('list_district') }}" class="btn btn-default pull-left"><span

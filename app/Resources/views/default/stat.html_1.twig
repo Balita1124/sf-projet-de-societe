@@ -1,0 +1,155 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                        <h3 class="card-title text-gray">Statistique</h3>
+                            <ul style="display: inline-block">
+                                <li class="menu-stat">Statistique</li>
+                                <li class="menu-stat"><a href="{{ path('hist') }}">Histogramme</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title text-behance">Statistique par province</h4>
+                            <table class="table">
+                                <thead>
+                                <tr class="text-dark">
+                                    <th>PROVINCE</th>
+                                    <th>A FAIRE</th>
+                                    <th>FAIT</th>
+                                    <th>PROGRESSION</th>
+                                    <th>POURCENTAGE</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for data in province_datas %}
+                                    <tr>
+                                        <td>{{ data['PROVINCE'] }}</td>
+                                        <td>{{ data['A FAIRE'] }}</td>
+                                        <td>{{ data['FAIT'] }}</td>
+                                        <td>
+                                            <div class="progress">
+                                                <div class="progress-bar
+                                                {% if data['POURCENTAGE'] < 35 %}
+                                                bg-danger
+                                                {% elseif data['POURCENTAGE'] > 50 %}
+                                                    bg-success
+                                                {% else %}
+                                                    bg-warning
+                                                {% endif %}"
+                                                     role="progressbar"
+                                                     style="width: {{ data['POURCENTAGE'] }}%" aria-valuenow="25"
+                                                     aria-valuemin="0"
+                                                     aria-valuemax="100"></div>
+                                            </div>
+                                        </td>
+
+                                        <td>{{ data['POURCENTAGE'] }} %</td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title text-behance">Statistique par region</h4>
+                            <table class="table">
+                                <thead>
+                                <tr class="text-dark">
+                                    <th>REGION</th>
+                                    <th>A FAIRE</th>
+                                    <th>FAIT</th>
+                                    <th>PROGRESSION</th>
+                                    <th>POURCENTAGE</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for data in region_datas %}
+                                    <tr>
+                                        <td>{{ data['REGION'] }}</td>
+                                        <td>{{ data['A FAIRE'] }}</td>
+                                        <td>{{ data['FAIT'] }}</td>
+                                        <td>
+                                            <div class="progress">
+                                                <div class="progress-bar
+                                                {% if data['POURCENTAGE'] < 35 %}
+                                                bg-danger
+                                                {% elseif data['POURCENTAGE'] > 50 %}
+                                                    bg-success
+                                                {% else %}
+                                                    bg-warning
+                                                {% endif %}"
+                                                     role="progressbar"
+                                                     style="width: {{ data['POURCENTAGE'] }}%" aria-valuenow="25"
+                                                     aria-valuemin="0"
+                                                     aria-valuemax="100"></div>
+                                            </div>
+                                        </td>
+                                        <td>{{ data['POURCENTAGE'] }} %</td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title text-behance">Statistique par district</h4>
+                            <table class="table">
+                                <thead>
+                                <tr class="text-dark">
+                                    <th>DISTRICT</th>
+                                    <th>A FAIRE</th>
+                                    <th>FAIT</th>
+                                    <th>PROGRESSION</th>
+                                    <th>POURCENTAGE</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for data in district_datas %}
+                                    <tr>
+                                        <td>{{ data['DISTRICT'] }}</td>
+                                        <td>{{ data['A FAIRE'] }}</td>
+                                        <td>{{ data['FAIT'] }}</td>
+                                        <td>
+                                            <div class="progress">
+                                                <div class="progress-bar
+                                                {% if data['POURCENTAGE'] < 35 %}
+                                                bg-danger
+                                                {% elseif data['POURCENTAGE'] > 50 %}
+                                                    bg-success
+                                                {% else %}
+                                                    bg-warning
+                                                {% endif %}"
+                                                     role="progressbar"
+                                                     style="width: {{ data['POURCENTAGE'] }}%" aria-valuenow="25"
+                                                     aria-valuemin="0"
+                                                     aria-valuemax="100"></div>
+                                            </div>
+                                        </td>
+                                        <td>{{ data['POURCENTAGE'] }} %</td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

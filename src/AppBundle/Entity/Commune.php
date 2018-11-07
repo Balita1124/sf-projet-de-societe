@@ -24,37 +24,6 @@ class Commune
     protected $name;
 
     /**
-     * @ORM\Column(type="integer", length=255)
-     */
-    protected $population;
-    /**
-     * @ORM\Column(type="integer", length=255)
-     */
-    protected $electeurs;
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    protected $hvm;
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    protected $rnm;
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    protected $tvm;
-
-    /**
-     * @ORM\Column(type="string")
-     */
-    protected $freqrnm;
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    protected $observation;
-
-
-    /**
      * @var Region $region
      *
      * @ORM\ManyToOne(targetEntity="District", inversedBy="communes", cascade={"persist", "merge"})
@@ -114,156 +83,22 @@ class Commune
         $this->district = $district;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
     }
 
-    /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getName()
-    {
+    public function getName() {
         return $this->name;
     }
 
-    /**
-     * @param mixed $name
-     */
-    public function setName($name)
-    {
+    public function setId($id) {
+        $this->id = $id;
+    }
+
+    public function setName($name) {
         $this->name = $name;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getRnm()
-    {
-        return $this->rnm;
-    }
 
-    /**
-     * @param mixed $rnm
-     */
-    public function setRnm($rnm)
-    {
-        $this->rnm = $rnm;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getTvm()
-    {
-        return $this->tvm;
-    }
-
-    /**
-     * @param mixed $tvm
-     */
-    public function setTvm($tvm)
-    {
-        $this->tvm = $tvm;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPopulation()
-    {
-        return $this->population;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getElecteurs()
-    {
-        return $this->electeurs;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getHvm()
-    {
-        return $this->hvm;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getObservation()
-    {
-        return $this->observation;
-    }
-
-    /**
-     * @param mixed $population
-     */
-    public function setPopulation($population)
-    {
-        $this->population = $population;
-    }
-
-    /**
-     * @param mixed $electeurs
-     */
-    public function setElecteurs($electeurs)
-    {
-        $this->electeurs = $electeurs;
-    }
-
-    /**
-     * @param mixed $hvm
-     */
-    public function setHvm($hvm)
-    {
-        $this->hvm = $hvm;
-    }
-
-    /**
-     * @param mixed $observation
-     */
-    public function setObservation($observation)
-    {
-        $this->observation = $observation;
-    }
-
-    /**
-     * @param ArrayCollection $fokontanys
-     */
-    public function setFokontanys($fokontanys)
-    {
-        $this->fokontanys = $fokontanys;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getFreqrnm()
-    {
-        return $this->freqrnm;
-    }
-
-    /**
-     * @param mixed $freqrnm
-     */
-    public function setFreqrnm($freqrnm)
-    {
-        $this->freqrnm = $freqrnm;
-    }
 
 }

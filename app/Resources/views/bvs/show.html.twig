@@ -1,0 +1,101 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title text-center display-4 text-primary"><span class="fa fa-home"></span>
+                                BV {{ bv.name }} - {{ bv.code }}
+                            </h4>
+
+                            <p class="card-description text-center display-5">
+                                <span>Commune  :
+                                    <a href="{{ path('show_commune', { 'commune': bv.fokontany.commune.id }) }}">
+                                        {{ bv.fokontany.commune.name }}
+                                    </a>
+                                </span><br>
+                                <span>District  :
+                                    <a href="{{ path('show_district', { 'district': bv.fokontany.commune.district.id }) }}">
+                                        {{ bv.fokontany.commune.district.name }}
+                                    </a>
+                                </span><br>
+                                <span>Region  :
+                                    <a href="{{ path('show_region', { 'region': bv.fokontany.commune.district.region.id }) }}">
+                                        {{ bv.fokontany.commune.district.region.name }}
+                                    </a>
+                                </span><br>
+                                <span>Province  :
+                                    <a href="{{ path('show_province', { 'province': bv.fokontany.commune.district.region.province.id }) }}">
+                                        {{ bv.fokontany.commune.district.region.province.name }}
+                                    </a>
+                                </span><br>
+
+                            </p>
+
+                            <a href="{{ path('list_bv') }}" class="btn btn-default pull-left"><span
+                                    class="fa fa-arrow-left"></span>
+                                Retour</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title text-primary"><u>Projets des societés dans la commune</u></h4>
+
+                            <p class="card-description text-center display-5">
+                            </p>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <td>Libelle</td>
+                                        <td>Valeur</td>
+                                        <td>Pourcentage</td>
+                                    </tr> 
+                                </thead>
+                                <tbody>
+                                    <tr><td>Electeurs</td><td>{{bv.electeurs}}</td><td></td></tr> 
+                                    <tr><td>Votants</td><td>{{bv.votants}}</td><td></td></tr> 
+                                    <tr><td>Numero 12</td><td>{{bv.voix12}}</td><td>{{bv.voix12 * 100 / bv.electeurs}}%</td></tr> 
+                                    <tr><td>Numero 13</td><td>{{bv.voix13}}</td><td>{{bv.voix13 * 100 / bv.electeurs}}%</td></tr>
+                                    <tr><td>Numero 25</td><td>{{bv.voix25}}</td><td>{{bv.voix25 * 100 / bv.electeurs}}%</td></tr>
+                                    <tr><td>Vato fotsy</td><td>{{bv.voixfotsy}}</td><td></td></tr> 
+                                    <tr><td>Vato maty</td><td>{{bv.voixmaty}}</td><td></td></tr> 
+                                </tbody>
+                            </table>
+                            {#<th>Nom</th>#}
+                            {#<th>Description</th>#}
+                            {#&#123;&#35;<th>Date</th>&#35;&#125;#}
+                            {#<th>Province</th>#}
+                            {#<th>Region</th>#}
+                            {#<th>District</th>#}
+                            {#</tr>#}
+                            {#</thead>#}
+                            {#<tbody>#}
+                            {#{% for promesse in commune.promesses %}#}
+                            {#<tr>#}
+                            {#<td>{{ promesse.name }}</td>#}
+                            {#<td>{{ promesse.description }}</td>#}
+                            {#&#123;&#35;<td>{{ promesse.date }}</td>&#35;&#125;#}
+                            {#<td>#}
+                            {#<a href="{{ path('show_province', { 'province': promesse.province.id }) }}">{{ promesse.province.name }}</a>#}
+                            {#</td>#}
+                            {#<td>#}
+                            {#<a href="{{ path('show_region', { 'region': promesse.region.id }) }}">{{ promesse.region.name }}</a>#}
+                            {#</td>#}
+                            {#<td>#}
+                            {#<a href="{{ path('show_district', { 'district': promesse.district.id }) }}">{{ promesse.district.name }}</a>#}
+                            {#</td>#}
+                            {#</tr>#}
+                            {#{% endfor %}#}
+                            {#</tbody>#}
+                            {#</table>#}
+                            {#</div>#}
+                            {#</div>#}
+                            {#</div>#}
+                                        </div>
+                    </div>
+                </div>
+            {% endblock %}

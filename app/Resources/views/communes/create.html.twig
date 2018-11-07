@@ -21,34 +21,6 @@
                                         <label for="district">District</label>
                                         {{ form_widget(form.district, { 'attr': {'class': 'form-control', 'placeholder': 'District'} }) }}
                                     </div>
-                                    <div class="form-group">
-                                        <label for="district">RNM</label>
-                                        {{ form_widget(form.rnm, { 'attr': {'class': 'form-control', 'placeholder': 'RNM'} }) }}
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="freqrnm">Frequence RNM</label>
-                                        {{ form_widget(form.freqrnm, { 'attr': {'class': 'form-control input-xs', 'placeholder': 'Frequence RNM'} }) }}
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="district">TVM</label>
-                                        {{ form_widget(form.tvm, { 'attr': {'class': 'form-control', 'placeholder': 'TVM'} }) }}
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="hvm">HVM</label>
-                                        {{ form_widget(form.hvm, { 'attr': {'class': 'form-control', 'placeholder': 'HVM'} }) }}
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="population">Population</label>
-                                        {{ form_widget(form.population, { 'attr': {'class': 'form-control', 'placeholder': 'Population'} }) }}
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="electeurs">Nombre Electeurs</label>
-                                        {{ form_widget(form.electeurs, { 'attr': {'class': 'form-control', 'placeholder': 'Nombre Electeurs'} }) }}
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="observation">Observation</label>
-                                        {{ form_widget(form.observation, { 'attr': {'class': 'form-control', 'placeholder': 'Observation'} }) }}
-                                    </div>
                                     <button type="submit" class="btn btn-success pull-right">Enregistrer</button>
                                     {{ form_end(form) }}
                                     <a href="{{ path('list_commune') }}" class="btn btn-default pull-left"><span

@@ -22,11 +22,12 @@
                 <div class="col-lg-12 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title text-behance">Statistique en general</h4>
+                            <h4 class="card-title text-behance">Statistique par region</h4>
                             <table class="table">
                                 <thead>
                                 <tr class="text-dark">
-                                    <th>GENERAL</th>
+                                    <th>REGION</th>
+                                    <th>PROVINCE</th>
                                     <th>NB</th>
                                     <th>Votants</th>
                                     <th>Numero 12</th>
@@ -35,9 +36,10 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                {% for data in general_datas %}
+                                {% for data in region_datas %}
                                     <tr>
-                                        <td>{{ data['GENERAL'] }}</td>
+                                        <td>{{ data['REGION'] }}</td>
+                                        <td>{{ data['PROVINCE'] }}</td>
                                         <td>{{ data['NB'] }}</td>
                                         <td>{{ data['Total'] }}</td>
                                         <td>{{ data['Valeur12'] }} ({{ data['Valeur12'] * 100 / data['Total'] }} %)</td>

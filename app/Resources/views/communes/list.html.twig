@@ -7,14 +7,6 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">Liste des communes(Toutes)</h4>
-                            <ul>
-                                <li>Toutes</li>
-                                <li><a href="{{ path('list_commune1') }}">Avec TVM/Avec RNM</a></li>
-                                <li><a href="{{ path('list_commune2') }}">Avec TVM/Sans RNM</a></li>
-                                <li><a href="{{ path('list_commune3') }}">Sans TVM/Avec RNM</a></li>
-                                <li><a href="{{ path('list_commune4') }}">Sans TVM/Sans RNM</a></li>
-                            </ul>
-
                             <p class="card-description">
                                 <a href="{{ path('create_commune') }}" class="btn btn-success pull-left"><span
                                             class="fa fa-plus"></span>
@@ -27,12 +19,6 @@
                                     <th>Nom</th>
                                     <th>District</th>
                                     <th>Région</th>
-                                    <th>RNM</th>
-                                    <th>TVM</th>
-                                    <th>HVM</th>
-                                    <th>Population</th>
-                                    <th>Nombre Electeurs</th>
-                                    <th>Observation</th>
                                     <th class="text-center">#</th>
                                 </tr>
                                 </thead>
@@ -48,18 +34,6 @@
                                         <td>
                                             <a href="{{ path('show_region', { 'region': commune.district.region.id }) }}">{{ commune.district.region.name }}</a>
                                         </td>
-                                        <td>
-                                            {{ commune.rnm == true? "OUI": "NON" }}
-                                        </td>
-                                        <td>
-                                            {{ commune.tvm == true? "OUI": "NON" }}
-                                        </td>
-                                        <td>
-                                            {{ commune.hvm == true? "OUI": "NON" }}
-                                        </td>
-                                        <td>{{ commune.population }}</td>
-                                        <td>{{ commune.electeurs }}</td>
-                                        <td>{{ commune.observation }}</td>
                                         <td class="text-center">
                                             <a class='btn btn-primary btn-xs'
                                                href="{{ path('edit_commune', { 'commune': commune.id }) }}"><span

@@ -22,11 +22,6 @@ class DistrictType extends AbstractType
     {
         $builder
             ->add('name', TextType::class)
-            ->add('nbEpp', IntegerType::class)
-            ->add('nbCeg', IntegerType::class)
-            ->add('nbLycee', IntegerType::class)
-            ->add('population', IntegerType::class)
-            ->add('electeurs', IntegerType::class)
             ->add('region', EntityType::class, array(
                 'class' => Region::class,
                 'choice_label' => 'name',

@@ -1,0 +1,174 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                        <h3 class="card-title text-gray">Statistique</h3>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title text-behance">Statistique par province</h4>
+                            <table class="table">
+                                <thead>
+                                <tr class="text-dark">
+                                    <th>PROVINCE</th>
+                                    <th>NB</th>
+                                    <th>Votants</th>
+                                    <th>Numero 12</th>
+                                    <th>Numero 13</th>
+                                    <th>Numero 25</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for data in province_datas %}
+                                    <tr>
+                                        <td>{{ data['PROVINCE'] }}</td>
+                                        <td>{{ data['NB'] }}</td>
+                                        <td>{{ data['Total'] }}</td>
+                                        <td>{{ data['Valeur12'] }}</td>
+                                        <td>{{ data['Valeur13'] }}</td>
+                                        <td>{{ data['Valeur25'] }}</td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title text-behance">Statistique par region</h4>
+                            <table class="table">
+                                <thead>
+                                <tr class="text-dark">
+                                    <th>REGION</th>
+                                    <th>NB</th>
+                                    <th>Votants</th>
+                                    <th>Numero 12</th>
+                                    <th>Numero 13</th>
+                                    <th>Numero 25</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for data in region_datas %}
+                                    <tr>
+                                        <td>{{ data['REGION'] }}</td>
+                                        <td>{{ data['NB'] }}</td>
+                                        <td>{{ data['Total'] }}</td>
+                                        <td>{{ data['Valeur12'] }}</td>
+                                        <td>{{ data['Valeur13'] }}</td>
+                                        <td>{{ data['Valeur25'] }}</td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title text-behance">Statistique par District</h4>
+                            <table class="table">
+                                <thead>
+                                <tr class="text-dark">
+                                    <th>DISTRICT</th>
+                                    <th>NB</th>
+                                    <th>Votants</th>
+                                    <th>Numero 12</th>
+                                    <th>Numero 13</th>
+                                    <th>Numero 25</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for data in district_datas %}
+                                    <tr>
+                                        <td>{{ data['DISTRICT'] }}</td>
+                                        <td>{{ data['NB'] }}</td>
+                                        <td>{{ data['Total'] }}</td>
+                                        <td>{{ data['Valeur12'] }}</td>
+                                        <td>{{ data['Valeur13'] }}</td>
+                                        <td>{{ data['Valeur25'] }}</td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title text-behance">Statistique par Commune</h4>
+                            <table class="table">
+                                <thead>
+                                <tr class="text-dark">
+                                    <th>COMMUNE</th>
+                                    <th>NB</th>
+                                    <th>Votants</th>
+                                    <th>Numero 12</th>
+                                    <th>Numero 13</th>
+                                    <th>Numero 25</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for data in commune_datas %}
+                                    <tr>
+                                        <td>{{ data['COMMUNE'] }}</td>
+                                        <td>{{ data['NB'] }}</td>
+                                        <td>{{ data['Total'] }}</td>
+                                        <td>{{ data['Valeur12'] }}</td>
+                                        <td>{{ data['Valeur13'] }}</td>
+                                        <td>{{ data['Valeur25'] }}</td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title text-behance">Statistique par fokontany</h4>
+                            <table class="table">
+                                <thead>
+                                <tr class="text-dark">
+                                    <th>FOKONTANY</th>
+                                    <th>NB</th>
+                                    <th>Votants</th>
+                                    <th>Numero 12</th>
+                                    <th>Numero 13</th>
+                                    <th>Numero 25</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for data in fokontany_datas %}
+                                    <tr>
+                                        <td>{{ data['FOKONTANY'] }}</td>
+                                        <td>{{ data['NB'] }}</td>
+                                        <td>{{ data['Total'] }}</td>
+                                        <td>{{ data['Valeur12'] }}</td>
+                                        <td>{{ data['Valeur13'] }}</td>
+                                        <td>{{ data['Valeur25'] }}</td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

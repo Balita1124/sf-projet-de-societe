@@ -26,12 +26,6 @@
                                         {{ commune.district.region.province.name }}
                                     </a>
                                 </span><br>
-                                <span>TVM  : {{ commune.rnm? "OUI": "NON" }}, RNM : {{ commune.rnm? "OUI": "NON" }} </span><br>
-                                <span>HVM  :{{ commune.hvm == true ? "OUI" : "NON" }}
-                                    {{ commune.observation !="" ? (", Observation: " ~ commune.observation) : "" }}
-                                </span><br>
-                                <span>Population  : {{ commune.population }}</span><br>
-                                <span>Nombre Electeurs  : {{ commune.electeurs }}</span><br>
                             </p>
 
                             <a href="{{ path('list_commune') }}" class="btn btn-default pull-left"><span

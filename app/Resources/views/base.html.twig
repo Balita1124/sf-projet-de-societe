@@ -103,13 +103,18 @@
                         <img class="menu-icon" src="{{ asset('public/images/menu_icons/01.png') }}" alt="menu icon">
                         <span class="menu-title">Fokontany</span></a>
                 </li>
-                <li class="{{ is_active("promesse", value) }} nav-item">
+                <li class="{{ is_active("bv", value) }} nav-item">
+                    <a class="nav-link" href="{{ path('list_bv') }}">
+                        <img class="menu-icon" src="{{ asset('public/images/menu_icons/01.png') }}" alt="menu icon">
+                        <span class="menu-title">Bureaux de vote</span></a>
+                </li>
+{#                <li class="{{ is_active("promesse", value) }} nav-item">
                     <a class="nav-link" href="{{ path('list_promesse') }}">
                         <img class="menu-icon" src="{{ asset('public/images/menu_icons/01.png') }}" alt="menu icon">
                         <span class="menu-title">Projets des societés</span></a>
-                </li>
+                </li>#}
                 <li class="{{ is_active("stat", value) }} nav-item">
-                    <a class="nav-link" href="{{ path('stat') }}">
+                    <a class="nav-link" href="{{ path('stat', { 'id': 1 }) }}">
                         <img class="menu-icon" src="{{ asset('public/images/menu_icons/01.png') }}" alt="menu icon">
                         <span class="menu-title">Statistiques</span></a>
                 </li>

@@ -1,4 +1,5 @@
 <?php
+
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -9,8 +10,8 @@ use Doctrine\Common\Collections\ArrayCollection;
  * @ORM\Entity
  * @ORM\Table(name="fokontany")
  */
-class Fokontany
-{
+class Fokontany {
+
     /**
      * @ORM\Id;
      * @ORM\Column(type="integer")
@@ -24,20 +25,6 @@ class Fokontany
     protected $name;
 
     /**
-     * @ORM\Column(type="integer")
-     */
-    protected $habitants;
-    /**
-     * @ORM\Column(type="integer")
-     */
-    protected $lecteurs;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    protected $dernierElection;
-
-    /**
      * @var Commune $commune
      *
      * @ORM\ManyToOne(targetEntity="Commune", inversedBy="fokontanys", cascade={"persist", "merge"})
@@ -47,133 +34,73 @@ class Fokontany
      */
     protected $commune;
 
+    /**
+     * @var ArrayCollection $bureaux
+     *
+     * @ORM\OneToMany(targetEntity="Bureau", mappedBy="fokontany", cascade={"persist", "remove", "merge"})
+     */
+    private $bureaux;
+
+    public function __construct() {
+        $this->bureaux = new ArrayCollection();
+    }
+
+    public function addBureau(Bureau $bureau) {
+        $bureau->setFokontany($this);
+
+        // Si l'objet fait déjà partie de la collection on ne l'ajoute pas
+        if (!$this->bureaux->contains($bureau)) {
+            $this->bureaux->add($bureau);
+        }
+    }
+
+    /**
+     * @return ArrayCollection $promesses
+     */
+    public function getBureaux() {
+        return $this->bureaux;
+    }
 
     /**
      * @return mixed
      */
-    public function getCommune()
-    {
+    public function getCommune() {
         return $this->commune;
     }
 
     /**
      * @param mixed $id
      */
-    public function setCommune(Commune $commune)
-    {
+    public function setCommune(Commune $commune) {
         $this->commune = $commune;
     }
 
     /**
      * @return mixed
      */
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
     }
 
     /**
      * @param mixed $id
      */
-    public function setId($id)
-    {
+    public function setId($id) {
         $this->id = $id;
     }
 
     /**
      * @return mixed
      */
-    public function getName()
-    {
+    public function getName() {
         return $this->name;
     }
 
     /**
      * @param mixed $name
      */
-    public function setName($name)
-    {
+    public function setName($name) {
         $this->name = $name;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getRnm()
-    {
-        return $this->rnm;
-    }
-
-    /**
-     * @param mixed $rnm
-     */
-    public function setRnm($rnm)
-    {
-        $this->rnm = $rnm;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getTvm()
-    {
-        return $this->tvm;
-    }
-
-    /**
-     * @param mixed $tvm
-     */
-    public function setTvm($tvm)
-    {
-        $this->tvm = $tvm;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getHabitants()
-    {
-        return $this->habitants;
-    }
-
-    /**
-     * @param mixed $habitants
-     */
-    public function setHabitants($habitants)
-    {
-        $this->habitants = $habitants;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getLecteurs()
-    {
-        return $this->lecteurs;
-    }
-
-    /**
-     * @param mixed $lecteurs
-     */
-    public function setLecteurs($lecteurs)
-    {
-        $this->lecteurs = $lecteurs;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDernierElection()
-    {
-        return $this->dernierElection;
-    }
-
-    /**
-     * @param mixed $dernierElection
-     */
-    public function setDernierElection($dernierElection)
-    {
-        $this->dernierElection = $dernierElection;
     }
 
 }
